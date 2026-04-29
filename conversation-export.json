@@ -1,0 +1,1269 @@
+{
+  "schemaVersion": "1",
+  "hasLmMessages": true,
+  "root": {
+    "id": "0e9fab88-3070-4299-94c7-e437e763fe7f",
+    "childrenIds": [
+      "69d568a3-0ea4-44b9-8b38-da56cb6e1c3d"
+    ],
+    "activeChildId": "69d568a3-0ea4-44b9-8b38-da56cb6e1c3d",
+    "summary": "Converting HD paper to Quarto document for JID submission",
+    "timestamp": 1777441667066,
+    "metadata": {
+      "kind": "main",
+      "submodeState": {},
+      "model": {
+        "id": "claude-sonnet-4-6",
+        "providerId": "anthropic",
+        "name": "Claude Sonnet 4.6",
+        "providerName": "Anthropic",
+        "thinkingEffort": "medium"
+      }
+    }
+  },
+  "messages": [
+    {
+      "id": "69d568a3-0ea4-44b9-8b38-da56cb6e1c3d",
+      "childrenIds": [
+        "e13d5769-911a-412a-b393-5de63badd386"
+      ],
+      "activeChildId": "e13d5769-911a-412a-b393-5de63badd386",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "user",
+            "content": "Convert this paper into a quarto document that can then be exported into a journal submission. You need to use bibtex citations and create a bibliography citation styòe appropriate for a submission to the Journal of Infectious Diseases",
+            "providerOptions": {
+              "providerMetadata": {
+                "positai": {
+                  "timestamp": 1777441667093
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "user",
+          "content": [
+            "Convert this paper into a quarto document that can then be exported into a journal submission. You need to use bibtex citations and create a bibliography citation styòe appropriate for a submission to the Journal of Infectious Diseases"
+          ]
+        }
+      },
+      "timestamp": 1777441667094
+    },
+    {
+      "id": "e13d5769-911a-412a-b393-5de63badd386",
+      "childrenIds": [
+        "17f3692b-6cbd-4127-bd4d-7541ee5bab6a"
+      ],
+      "activeChildId": "17f3692b-6cbd-4127-bd4d-7541ee5bab6a",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01Qzz6pjxTVPntPGem7KZKRw",
+                "toolName": "skill",
+                "providerOptions": {
+                  "databot": {
+                    "microCompactKeep": true
+                  }
+                },
+                "args": {
+                  "skill": "quarto-authoring"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 3,
+                    "cache_creation_input_tokens": 10721,
+                    "cache_read_input_tokens": 0,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 10721,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 56,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 10721,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777441667134,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 3,
+                    "outputTokens": 56,
+                    "totalTokens": 10780,
+                    "cacheReadTokens": 0,
+                    "cacheWriteTokens": 10721,
+                    "cacheWrite5mTokens": 10721,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01Qzz6pjxTVPntPGem7KZKRw",
+                "toolName": "skill",
+                "result": {
+                  "type": "text",
+                  "value": "# Quarto Authoring\n\n> This skill is based on Quarto CLI v1.8.26.\n\n## When to Use What\n\nTask: Write a new Quarto document\nUse: Follow \"QMD Essentials\" below, then see specific reference files\n\nTask: Convert R Markdown to Quarto\nUse: [references/conversion-rmarkdown.md](references/conversion-rmarkdown.md)\n\nTask: Migrate bookdown project\nUse: [references/conversion-bookdown.md](references/conversion-bookdown.md)\n\nTask: Migrate xaringan slides\nUse: [references/conversion-xaringan.md](references/conversion-xaringan.md)\n\nTask: Migrate distill article\nUse: [references/conversion-distill.md](references/conversion-distill.md)\n\nTask: Migrate blogdown site\nUse: [references/conversion-blogdown.md](references/conversion-blogdown.md)\n\nTask: Add cross-references\nUse: [references/cross-references.md](references/cross-references.md)\n\nTask: Configure code cells\nUse: [references/code-cells.md](references/code-cells.md)\n\nTask: Add figures with captions\nUse: [references/figures.md](references/figures.md)\n\nTask: Create tables\nUse: [references/tables.md](references/tables.md)\n\nTask: Add citations and bibliography\nUse: [references/citations.md](references/citations.md)\n\nTask: Add callout blocks\nUse: [references/callouts.md](references/callouts.md)\n\nTask: Add diagrams (Mermaid, Graphviz)\nUse: [references/diagrams.md](references/diagrams.md)\n\nTask: Control page layout\nUse: [references/layout.md](references/layout.md)\n\nTask: Use shortcodes\nUse: [references/shortcodes.md](references/shortcodes.md)\n\nTask: Add conditional content\nUse: [references/conditional-content.md](references/conditional-content.md)\n\nTask: Use divs and spans\nUse: [references/divs-and-spans.md](references/divs-and-spans.md)\n\nTask: Configure YAML front matter\nUse: [references/yaml-front-matter.md](references/yaml-front-matter.md)\n\nTask: Find and use extensions\nUse: [references/extensions.md](references/extensions.md)\n\nTask: Apply markdown linting rules\nUse: [references/markdown-linting.md](references/markdown-linting.md)\n\n## QMD Essentials\n\n### Basic Document Structure\n\n```markdown\n---\ntitle: \"Document Title\"\nauthor: \"Author Name\"\ndate: today\nformat: html\n---\n\nContent goes here.\n```\n\nA Quarto document consists of two main parts:\n\n1. **YAML Front Matter**: Metadata and configuration at the top, enclosed by `---`.\n2. **Markdown Content**: Main body using standard markdown syntax.\n\n### Divs and Spans\n\nDivs use fenced syntax with three colons:\n\n```markdown\n::: {.class-name}\nContent inside the div.\n:::\n```\n\nSpans use bracketed syntax:\n\n```markdown\nThis is [important text]{.highlight}.\n```\n\nDetails: [references/divs-and-spans.md](references/divs-and-spans.md)\n\n### Code Cell Options Syntax\n\nA code cell starts with triple backticks and a language identifier between curly braces.\nCode cells are code blocks that can be executed to produce output.\n\nQuarto uses the language's comment symbol + `|` for cell options. Options use **dashes, not dots** (e.g., `fig-cap` not `fig.cap`).\n\n- R, Python: `#|`\n- Mermaid: `%%|`\n- Graphviz/DOT: `//|`\n\n````markdown\n```{r}\n#| label: fig-example\n#| echo: false\n#| fig-cap: \"A scatter plot example.\"\n\nplot(x, y)\n```\n````\n\nCommon execution options:\n\n| Option    | Description       | Values                    |\n| --------- | ----------------- | ------------------------- |\n| `eval`    | Evaluate code     | `true`, `false`           |\n| `echo`    | Show code         | `true`, `false`, `fenced` |\n| `output`  | Include output    | `true`, `false`, `asis`   |\n| `warning` | Show warnings     | `true`, `false`           |\n| `error`   | Show errors       | `true`, `false`           |\n| `include` | Include in output | `true`, `false`           |\n\nSet document-level defaults in YAML front matter:\n\n```yaml\nexecute:\n  echo: false\n  warning: false\n```\n\nDetails: [references/code-cells.md](references/code-cells.md)\n\n### Cross-References\n\nLabels must start with a type prefix. Reference with `@`:\n\n- Figure: `fig-` prefix, e.g., `#| label: fig-plot` → `@fig-plot`\n- Table: `tbl-` prefix, e.g., `#| label: tbl-data` → `@tbl-data`\n- Section: `sec-` prefix, e.g., `{#sec-intro}` → `@sec-intro`\n- Equation: `eq-` prefix, e.g., `{#eq-model}` → `@eq-model`\n\n````markdown\n```{r}\n#| label: fig-plot\n#| fig-cap: \"A caption for the plot.\"\nplot(1)\n```\n\nSee @fig-plot for the results.\n````\n\nDetails: [references/cross-references.md](references/cross-references.md)\n\n### Callout Blocks\n\nFive types: `note`, `warning`, `important`, `tip`, `caution`.\n\n```markdown\n::: {.callout-note}\nThis is a note callout.\n:::\n\n::: {.callout-warning}\n\n## Custom Title\n\nThis is a warning with a custom title.\n\n:::\n```\n\nDetails: [references/callouts.md](references/callouts.md)\n\n### Figures\n\n```markdown\n![Caption text](image.png){#fig-name fig-alt=\"Alt text\"}\n```\n\nSubfigures:\n\n```markdown\n::: {#fig-group layout-ncol=2}\n![Sub caption 1](image1.png){#fig-sub1}\n\n![Sub caption 2](image2.png){#fig-sub2}\n\nMain caption for the group.\n:::\n```\n\nDetails: [references/figures.md](references/figures.md)\n\n### Tables\n\n```markdown\n::: {#tbl-example}\n\n| Column 1 | Column 2 |\n| -------- | -------- |\n| Data 1   | Data 2   |\n\nTable caption.\n:::\n```\n\nDetails: [references/tables.md](references/tables.md)\n\n### Citations\n\n```markdown\nAccording to @smith2020, the results show...\nMultiple citations [@smith2020; @jones2021].\n```\n\nConfigure in YAML:\n\n```yaml\nbibliography: references.bib\ncsl: apa.csl\n```\n\nDetails: [references/citations.md](references/citations.md)\n\n## Common Workflows\n\n### Creating an HTML Document\n\n```yaml\ntitle: \"My Report\"\nauthor: \"Your Name\"\ndate: today\nformat:\n  html:\n    toc: true\n    code-fold: true\n    theme: cosmo\n```\n\n### Creating a PDF Document\n\n```yaml\ntitle: \"My Report\"\nformat:\n  pdf:\n    documentclass: article\n    papersize: a4\n```\n\n### Creating a RevealJS Presentation\n\n```markdown\n---\ntitle: \"My Presentation\"\nformat: revealjs\n---\n\n## First Slide\n\nContent here.\n\n## Second Slide\n\nMore content.\n```\n\n### Setting Up a Quarto Project\n\nCreate `_quarto.yml` in the project root:\n\n```yaml\nproject:\n  type: website\n\nwebsite:\n  title: \"My Site\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: about.qmd\n        text: About\n\nformat:\n  html:\n    theme: cosmo\n```\n\n## Resources\n\n- [Quarto Documentation](https://quarto.org/docs/)\n- [Quarto Guide](https://quarto.org/docs/guide/)\n- [Quarto Extensions](https://quarto.org/docs/extensions/)\n- [Community Extensions List](https://m.canouil.dev/quarto-extensions/)\n\n\n---\n**Skill directory**: `/Users/russelllewis/.positron/extensions/posit.assistant-0.3.3-universal/dist/skills/quarto-authoring`\n\nThis skill may include additional files (scripts/, references/, assets/). Use `ls` to explore and `read` to load them."
+                },
+                "providerOptions": {
+                  "databot": {
+                    "microCompactKeep": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 1 tool calls this turn (soft limit: ~3)</MEMO>"
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_019FAABe8NoPwk53ybD2KFfW",
+                "toolName": "explore",
+                "args": {
+                  "exploreType": "codebase",
+                  "target": "/Users/russelllewis/Desktop/HD_JID",
+                  "goal": "Find the paper content - look for any Word docs, PDFs, text files, markdown files, or any other document that contains the paper text",
+                  "thoroughness": "thorough"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 2188,
+                    "cache_read_input_tokens": 10721,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 2188,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 174,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 2188,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777441695548,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 174,
+                    "totalTokens": 13084,
+                    "cacheReadTokens": 10721,
+                    "cacheWriteTokens": 2188,
+                    "cacheWrite5mTokens": 2188,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_019FAABe8NoPwk53ybD2KFfW",
+                "toolName": "explore",
+                "result": {
+                  "success": true,
+                  "answer": "# Comprehensive Exploration Summary: HD_JID Paper Content\n\n## Findings\n\nBased on my thorough exploration of `/Users/russelllewis/Desktop/HD_JID` and the surrounding directory structure, here are my findings:\n\n### **Primary Discovery: HD_JID Directory Status**\n\n**The `/Users/russelllewis/Desktop/HD_JID` directory contains ONLY a `.git` folder and NO working paper files.**\n\n- The directory structure shows exclusively:\n  - `.git/` (a git repository with empty refs, empty pack files, and no commits)\n  - No markdown files (.md, .qmd, .Rmd)\n  - No text files (.txt)\n  - No Word documents (.docx)\n  - No PDFs\n  - No other document types\n\nThe `.git` configuration files are access-restricted, but the directory listing clearly shows an essentially empty repository.\n\n### **Related Paper Content in Desktop Context**\n\nWhile the HD_JID directory itself contains no paper, there are **HD-related PDF documents on the Desktop**:\n1. **HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf** (586.6 KB)\n2. **HD_reviewers comments.pdf** (117.2 KB)\n\nThese PDFs appear to be related to Liposomal Amphotericin B (L-AMB) treatment for HD (likely Hematopoietic Disease/Hematologic conditions) and reviewer feedback.\n\n### **Related Research Directories with Document Content**\n\nThe Desktop contains several research directories with substantial paper/manuscript content in markdown/quarto format:\n\n1. **`/hemeinfect/`** - Contains febrile_neutropenia.qmd and HTML outputs\n2. **`/immuncompromise/`** - Contains chapter-immunocompromise.qmd, chapter-draft.qmd with immunocomp.pdf (6.7 MB)\n3. **`/IFI/`** - Contains chapter-slides.qmd, chapter-webpage.qmd, and fungal-webpage.qmd with PDF outputs (23 MB)\n4. **`/idspecialists/`** and **`/idlecture/`** - Multiple lecture/teaching markdown files with PDFs\n\n### **Conclusion**\n\n**The HD_JID directory appears to be an initialized but unused/empty git repository.** The actual paper content related to HD appears to be either:\n- Stored as the two PDF files on the Desktop itself, or\n- Located within the related immunocompromise/hemeinfect directories, which contain chapters on post-transplant infections and immunocompromised host management (relevant to HD contexts)\n\nThere is **no primary markdown/manuscript source file in the HD_JID directory itself**."
+                },
+                "providerOptions": {
+                  "databot": {
+                    "subagentTreeId": "5e8097e2-a80d-492f-9f61-c936efb6016d"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 2 tool calls this turn (soft limit: ~3)</MEMO>\n\nIt looks like the `HD_JID` directory is an empty git repository — there's no paper content in it yet. However, I found two PDF files on your Desktop that appear to be related:\n\n1. **`HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf`** – looks like the main manuscript\n2. **`HD_reviewers comments.pdf`** – reviewer comments\n\nTo convert your paper into a Quarto document, I'll need access to the paper's actual text content. Here are a few options:\n\n1. **Share the text directly** — You could paste the paper text (or key sections) into the chat and I'll structure it into a proper `.qmd` file.\n2. **Copy text from the PDF** — If you can copy-paste the text from the PDF into the chat, I can work from that.\n3. **Point me to a source file** — If the paper exists as a Word `.docx` file somewhere, you can tell me the path and I can read it via the terminal (`pandoc` can convert it).\n4. **The PDF on the Desktop** — I can attempt to extract text from the PDF using command-line tools if you'd like.\n\nWhich approach works best for you? I'd suggest option 3 or 4 if a `.docx` exists, as that will give the cleanest conversion. I'll suggest some questions below.\n\n<SUGGESTION>Extract text from the PDF on the Desktop and convert it to a Quarto document.</SUGGESTION>\n<SUGGESTION>I'll paste the paper text into the chat — please structure it as a Quarto document for JID submission.</SUGGESTION>\n<SUGGESTION>The paper is a Word document — convert it from .docx to a Quarto document.</SUGGESTION>\n\n<MESSAGESUMMARY>HD_JID directory is empty; paper content needed to proceed</MESSAGESUMMARY>\n<CONVERSATIONSUMMARY>Converting HD paper to Quarto document for JID submission</CONVERSATIONSUMMARY>"
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 13793,
+                    "cache_read_input_tokens": 0,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 13793,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 491,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 13793,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442090709,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 491,
+                    "totalTokens": 14285,
+                    "cacheReadTokens": 0,
+                    "cacheWriteTokens": 13793,
+                    "cacheWrite5mTokens": 13793,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "assistant",
+          "content": [
+            "\n\n<div><tool-call id=\"toolu_01Qzz6pjxTVPntPGem7KZKRw\"><script type=\"application/json\">{\"version\":1,\"name\":\"skill\",\"input\":{\"skill\":\"quarto-authoring\"},\"caption\":\"quarto-authoring\"}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01Qzz6pjxTVPntPGem7KZKRw\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"# Quarto Authoring\\n\\n> This skill is based on Quarto CLI v1.8.26.\\n\\n## When to Use What\\n\\nTas...[truncated, total 6682 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"# Quarto Authoring\\n\\n> This skill is based on Quarto CLI v1.8.26.\\n\\n## When to Use What\\n\\nTask: Write a new Quarto document\\nUse: Follow \\\"QMD Essentials\\\" below, then see specific reference files\\n\\nTask: Convert R Markdown to Quarto\\n...\",\"language\":\"markdown\"},\"elapsedMs\":2}</script></tool-result></div>\n\n\n\n<div><tool-call id=\"toolu_019FAABe8NoPwk53ybD2KFfW\"><script type=\"application/json\">{\"version\":1,\"name\":\"explore\",\"input\":{\"exploreType\":\"codebase\",\"target\":\"/Users/russelllewis/Desktop/HD_JID\",\"goal\":\"Find the paper content - look for any Word docs, PDFs, text files, markdown files, or any ...[truncated, total 133 chars]\",\"thoroughness\":\"thorough\"}}</script></tool-call></div><SUBAGENT ID=\"5e8097e2-a80d-492f-9f61-c936efb6016d\" PARENT=\"0f3213d9-fdb4-4287-957c-1e9ead427f0d\" TASK=\"Explore the codebase and answer: Find the paper content - look for any Word docs, PDFs, text files, markdown files, or any other document that contains the paper text&#10;&#10;Target: /Users/russelllewis/Desktop/HD_JID&#10;&#10;Do a comprehensive exploration. Be thorough and detailed.&#10;&#10;Provide a clear summary of your findings.\" DEPTH=\"1\" TYPE=\"explore\" CAPTION=\"/Users/russelllewis/Desktop/HD_JID\"></SUBAGENT>\n\n\n<div><tool-result call-id=\"toolu_019FAABe8NoPwk53ybD2KFfW\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"json\",\"value\":{\"success\":true,\"answer\":\"# Comprehensive Exploration Summary: HD_JID Paper Content\\n\\n## Findings\\n\\nBased on my thorou...[truncated, total 2289 chars]\"}},\"elapsedMs\":390627}</script></tool-result></div>\n\n\n\nIt looks like the `HD_JID` directory is an empty git repository — there's no paper content in it yet. However, I found two PDF files on your Desktop that appear to be related:\n\n1. **`HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf`** – looks like the main manuscript\n2. **`HD_reviewers comments.pdf`** – reviewer comments\n\nTo convert your paper into a Quarto document, I'll need access to the paper's actual text content. Here are a few options:\n\n1. **Share the text directly** — You could paste the paper text (or key sections) into the chat and I'll structure it into a proper `.qmd` file.\n2. **Copy text from the PDF** — If you can copy-paste the text from the PDF into the chat, I can work from that.\n3. **Point me to a source file** — If the paper exists as a Word `.docx` file somewhere, you can tell me the path and I can read it via the terminal (`pandoc` can convert it).\n4. **The PDF on the Desktop** — I can attempt to extract text from the PDF using command-line tools if you'd like.\n\nWhich approach works best for you? I'd suggest option 3 or 4 if a `.docx` exists, as that will give the cleanest conversion. I'll suggest some questions below.\n\n\n<span class=\"suggestion\">Extract text from the PDF on the Desktop and convert it to a Quarto document.</span>\n\n\n<span class=\"suggestion\">I'll paste the paper text into the chat — please structure it as a Quarto document for JID submission.</span>\n\n\n<span class=\"suggestion\">The paper is a Word document — convert it from .docx to a Quarto document.</span>\n\n\n\n"
+          ]
+        }
+      },
+      "timestamp": 1777441667094
+    },
+    {
+      "id": "17f3692b-6cbd-4127-bd4d-7541ee5bab6a",
+      "childrenIds": [
+        "958931d8-e4f4-43d3-acb7-95576ae4e3dd"
+      ],
+      "activeChildId": "958931d8-e4f4-43d3-acb7-95576ae4e3dd",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "user",
+            "content": "No this is a seperate project. Only look in HD_JID folder. I have put in the files you need",
+            "providerOptions": {
+              "providerMetadata": {
+                "positai": {
+                  "timestamp": 1777442116182
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "user",
+          "content": [
+            "No this is a seperate project. Only look in HD_JID folder. I have put in the files you need"
+          ]
+        }
+      },
+      "timestamp": 1777442116182
+    },
+    {
+      "id": "958931d8-e4f4-43d3-acb7-95576ae4e3dd",
+      "childrenIds": [
+        "9f226db1-0b66-48b2-b1a6-ea2b13e3a941"
+      ],
+      "activeChildId": "9f226db1-0b66-48b2-b1a6-ea2b13e3a941",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Let me take a fresh look at what's in the HD_JID folder now."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01XfmRaqv2pnpbtiLPdMwArQ",
+                "toolName": "ls",
+                "args": {
+                  "path": "/Users/russelllewis/Desktop/HD_JID",
+                  "show_details": true
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 3,
+                    "cache_creation_input_tokens": 3657,
+                    "cache_read_input_tokens": 10653,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 3657,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 102,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 3657,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442116235,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 3,
+                    "outputTokens": 102,
+                    "totalTokens": 14415,
+                    "cacheReadTokens": 10653,
+                    "cacheWriteTokens": 3657,
+                    "cacheWrite5mTokens": 3657,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01XfmRaqv2pnpbtiLPdMwArQ",
+                "toolName": "ls",
+                "result": {
+                  "type": "text",
+                  "value": "        Apr 29 07:55 .git/\n 586.6K Apr 29 06:52 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\n 117.2K Apr 29 06:52 HD_reviewers comments.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 1 tool calls this turn (soft limit: ~3)</MEMO>\n\nI can see two files now:\n1. **`HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf`** — the main manuscript\n2. **`HD_reviewers comments.pdf`** — reviewer comments\n\nLet me extract the text from the main manuscript PDF so I can convert it."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01EZCqazmFjmwJvzY4P6gMAy",
+                "toolName": "bash",
+                "args": {
+                  "command": "cd \"/Users/russelllewis/Desktop/HD_JID\" && pdftotext \"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\" - 2>/dev/null | head -300",
+                  "intent": "Extract text from the main manuscript PDF"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 192,
+                    "cache_read_input_tokens": 14310,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 192,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 243,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 192,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442118767,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 243,
+                    "totalTokens": 14746,
+                    "cacheReadTokens": 14310,
+                    "cacheWriteTokens": 192,
+                    "cacheWrite5mTokens": 192,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01EZCqazmFjmwJvzY4P6gMAy",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "(no output)"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_012837PuMAr3swVzM1PUt25y",
+                "toolName": "bash",
+                "args": {
+                  "command": "cd \"/Users/russelllewis/Desktop/HD_JID\" && python3 -c \"\nimport subprocess\nresult = subprocess.run(['mdls', 'HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf'], capture_output=True, text=True)\nprint(result.stdout[:500])\n\" && file \"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\"",
+                  "intent": "Check file type and metadata"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 257,
+                    "cache_read_input_tokens": 14502,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 257,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 193,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 257,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442124623,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 193,
+                    "totalTokens": 14953,
+                    "cacheReadTokens": 14502,
+                    "cacheWriteTokens": 257,
+                    "cacheWrite5mTokens": 257,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_012837PuMAr3swVzM1PUt25y",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "kMDItemAlternateNames                  = (\n    \"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\"\n)\nkMDItemAuthors                         = (\n    Pages\n)\nkMDItemContentCreationDate             = 2026-04-29 04:52:02 +0000\nkMDItemContentCreationDate_Ranking     = 2026-04-29 00:00:00 +0000\nkMDItemContentModificationDate         = 2026-04-29 04:52:02 +0000\nkMDItemContentModificationDate_Ranking = 2026-04-29 00:00:00 +0000\nkMDItemContentType                     = \"com.adobe.pdf\"\nkMDItemConten\nHD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf: PDF document, version 1.3, 8 pages"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 3 tool calls this turn (soft limit: ~3)</MEMO>\n\nThe PDF was created by Apple Pages (version 1.3) and is 8 pages. `pdftotext` isn't returning output — this PDF may have its text encoded in a way that requires a different extraction method. Let me try another approach."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01XH8LHcKFqKSHebCZASpBdC",
+                "toolName": "bash",
+                "args": {
+                  "command": "cd \"/Users/russelllewis/Desktop/HD_JID\" && python3 -c \"\nimport urllib.request, os\n# Try using PyMuPDF (fitz) if available\ntry:\n    import fitz\n    doc = fitz.open('HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf')\n    for i, page in enumerate(doc):\n        print(f'=== PAGE {i+1} ===')\n        print(page.get_text())\nexcept ImportError:\n    print('PyMuPDF not available')\n\"",
+                  "intent": "Extract text using PyMuPDF"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 453,
+                    "cache_read_input_tokens": 14759,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 453,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 304,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 453,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442132998,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 304,
+                    "totalTokens": 15517,
+                    "cacheReadTokens": 14759,
+                    "cacheWriteTokens": 453,
+                    "cacheWrite5mTokens": 453,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01XH8LHcKFqKSHebCZASpBdC",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "PyMuPDF not available"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01EpzyinpJx8GYebcnLv9PEP",
+                "toolName": "bash",
+                "args": {
+                  "command": "cd \"/Users/russelllewis/Desktop/HD_JID\" && python3 -c \"\ntry:\n    import pdfplumber\n    with pdfplumber.open('HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf') as pdf:\n        for i, page in enumerate(pdf.pages):\n            print(f'=== PAGE {i+1} ===')\n            print(page.extract_text())\nexcept ImportError:\n    print('pdfplumber not available')\n\" 2>&1 | head -400",
+                  "intent": "Try pdfplumber for text extraction"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 323,
+                    "cache_read_input_tokens": 15212,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 323,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 217,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 323,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442143987,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 217,
+                    "totalTokens": 15753,
+                    "cacheReadTokens": 15212,
+                    "cacheWriteTokens": 323,
+                    "cacheWrite5mTokens": 323,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01EpzyinpJx8GYebcnLv9PEP",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "pdfplumber not available"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01QLgbh5e6kZbv8E5t7B2uWs",
+                "toolName": "bash",
+                "args": {
+                  "command": "which ps2ascii && ps2ascii \"/Users/russelllewis/Desktop/HD_JID/HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\" 2>&1 | head -200\n# Also try strings as fallback\nstrings \"/Users/russelllewis/Desktop/HD_JID/HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\" | grep -v '^[^a-zA-Z]*$' | head -100",
+                  "intent": "Try ps2ascii and strings for text extraction"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 235,
+                    "cache_read_input_tokens": 15535,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 235,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 212,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 235,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442148307,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 212,
+                    "totalTokens": 15983,
+                    "cacheReadTokens": 15535,
+                    "cacheWriteTokens": 235,
+                    "cacheWrite5mTokens": 235,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01QLgbh5e6kZbv8E5t7B2uWs",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "%PDF-1.3\n3 0 obj\n<< /Filter /FlateDecode /Length 1647 >>\nstream\n4e\\U\nm5JD\nk*u&u\nL^&qf\nMUfy1\nMlCI\nEhHh\nZ-}.\nY\\gI\nU2A{\n5[N1\nCVRonf\n\\Aiz\nR8EmzR\nt{Mn\n.PI7\nOh<{\nGJ{K?~\n^Z?=\nL%mN\nCFBC\nz^*K\n]oHT^\nendstream\nendobj\n1 0 obj\n<< /Type /Page /Parent 2 0 R /Resources 4 0 R /Contents 3 0 R /MediaBox [0 0 595 842]\nendobj\n4 0 obj\n<< /ProcSet [ /PDF /Text ] /ColorSpace << /Cs1 5 0 R >> /Font << /TT1 6 0 R\n/TT2 7 0 R >> >>\nendobj\n9 0 obj\n<< /N 3 /Alternate /DeviceRGB /Length 2612 /Filter /FlateDecode >>\nstream\n)VdT\n\"7C$\n$n?z\nLA\"S\nyCAP8\n\\2n5\n $l$T\nTIj\"]&=&\n:dGr\nY@^O\n@y@yC\nD}J}/G\ne%e[\n*n*|\n0j&jaj\n.[7A\nSwBOK/X/_\nk]c}\nUx~xw\n-bEDC\nGME{E\n{$vr\nL(sYf\n~5f5wug\nm mH\nVa[q`\n6i{L{\n:Wt>\nx&mf\nendstream\nendobj\n5 0 obj\n[ /ICCBased 9 0 R ]\nendobj\n11 0 obj\n<< /Filter /FlateDecode /Length 3481 >>\nstream\n+:o\\@\n};\\e\n*P>:d\n6xKx\nBSF$2\n\"Va3\n4uCb\nWWh]\n|;B[K~e]4\nD\\UC\ngBI4\n@A<a\nVD?B\f\nfWlw\n)9A3$\nXF'n\n4x@g!\nXE?p\nE?U:\n,=5u\nNEI<\n@8+M\nO7JD\nzlso"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 3 tool calls this turn (soft limit: ~3)</MEMO>\n\nThe PDF has compressed/encoded streams, which means the text is not extractable with standard command-line tools available on your system. Since the PDF was created by Apple Pages, the original `.pages` file (or a `.docx` export) would be much easier to work with.\n\nCould you help me with one of these options?\n\n1. **Export from Pages as Word (.docx)** — Open the file in Pages, go to File → Export To → Word, save it to the `HD_JID` folder. I can then use `pandoc` to extract the text cleanly.\n\n2. **Export from Pages as plain text** — File → Export To → Plain Text, then save to the `HD_JID` folder.\n\n3. **Paste the text here** — Select all text in the Pages document (⌘A), copy (⌘C), and paste it into the chat.\n\nOption 1 (export as `.docx`) will give the best results — it preserves formatting, headings, tables, and figures which I can then faithfully convert to Quarto. I'll suggest some questions below.\n\n<SUGGESTION>I've exported the paper as a .docx file into the HD_JID folder — please convert it now.</SUGGESTION>\n<SUGGESTION>I've pasted the text of the paper below — please structure it as a Quarto document.</SUGGESTION>\n\n<MESSAGESUMMARY>PDF text not extractable; need .docx or plain text export from Pages</MESSAGESUMMARY>\n<CONVERSATIONSUMMARY>Converting HD paper to Quarto document for JID submission</CONVERSATIONSUMMARY>"
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 865,
+                    "cache_read_input_tokens": 15770,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 865,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 393,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 865,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442153217,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 393,
+                    "totalTokens": 17029,
+                    "cacheReadTokens": 15770,
+                    "cacheWriteTokens": 865,
+                    "cacheWrite5mTokens": 865,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "assistant",
+          "content": [
+            "Let me take a fresh look at what's in the HD_JID folder now.\n\n<div><tool-call id=\"toolu_01XfmRaqv2pnpbtiLPdMwArQ\"><script type=\"application/json\">{\"version\":1,\"name\":\"ls\",\"input\":{\"path\":\"/Users/russelllewis/Desktop/HD_JID\",\"show_details\":true},\"caption\":\"/Users/russelllewis/Desktop/HD_JID\"}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01XfmRaqv2pnpbtiLPdMwArQ\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"        Apr 29 07:55 .git/\\n 586.6K Apr 29 06:52 HD L-AMB for MCM review-REL and DPK-2-2026...[truncated, total 150 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"        Apr 29 07:55 .git/\\n 586.6K Apr 29 06:52 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\n 117.2K Apr 29 06:52 HD_reviewers comments.pdf\"},\"elapsedMs\":1}</script></tool-result></div>\n\n\n\nI can see two files now:\n1. **`HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf`** — the main manuscript\n2. **`HD_reviewers comments.pdf`** — reviewer comments\n\nLet me extract the text from the main manuscript PDF so I can convert it.\n\n<div><tool-call id=\"toolu_01EZCqazmFjmwJvzY4P6gMAy\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && pdftotext \\\"HD L-AMB for MCM review-REL and DPK-...[truncated, total 136 chars]\",\"intent\":\"Extract text from the main manuscript PDF\"},\"intent\":\"Extract text from the main manuscript PDF\",\"inputPreview\":{\"type\":\"code\",\"value\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && pdftotext \\\"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\\" - 2>/dev/null | head -300\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01EZCqazmFjmwJvzY4P6gMAy\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"(no output)\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"(no output)\",\"language\":\"text\"},\"elapsedMs\":13}</script></tool-result></div>\n\n\n\n<div><tool-call id=\"toolu_012837PuMAr3swVzM1PUt25y\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\nimport subprocess\\nresult = subproc...[truncated, total 293 chars]\",\"intent\":\"Check file type and metadata\"},\"intent\":\"Check file type and metadata\",\"inputPreview\":{\"type\":\"code\",\"value\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\nimport subprocess\\nresult = subprocess.run(['mdls', 'HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf'], capture_output=True, text=True)\\nprint(result.stdout[:500])\\n\\\" && file \\\"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\\"\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_012837PuMAr3swVzM1PUt25y\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"kMDItemAlternateNames                  = (\\n    \\\"HD L-AMB for MCM review-REL and DPK-2-2026...[truncated, total 592 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"kMDItemAlternateNames                  = (\\n    \\\"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\\"\\n)\\nkMDItemAuthors                         = (\\n    Pages\\n)\\nkMDItemContentCreationDate             = 2026-04-29 04:52:02 +0000\\nkMDItemContentCreationDate_Ranking     = 2026-04-29 00:00:00 +0000\\nkMDItemContentModificationDate         = 2026-04-29 04:52:02 +0000\\nkMDItemContentModificationDate_Ranking = 2026-04-29 00:00:00 +0000\\nkMDItemContentType                     = \\\"com.adobe.pdf\\\"\\nkMDItemConten\\nHD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf: PDF document, version 1.3, 8 pages\",\"language\":\"text\"},\"elapsedMs\":104}</script></tool-result></div>\n\n\n\nThe PDF was created by Apple Pages (version 1.3) and is 8 pages. `pdftotext` isn't returning output — this PDF may have its text encoded in a way that requires a different extraction method. Let me try another approach.\n\n<div><tool-call id=\"toolu_01XH8LHcKFqKSHebCZASpBdC\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\nimport urllib.request, os\\n# Try us...[truncated, total 381 chars]\",\"intent\":\"Extract text using PyMuPDF\"},\"intent\":\"Extract text using PyMuPDF\",\"inputPreview\":{\"type\":\"code\",\"value\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\nimport urllib.request, os\\n# Try using PyMuPDF (fitz) if available\\ntry:\\n    import fitz\\n    doc = fitz.open('HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf')\\n    for i, page in enumerate(doc):\\n        print(f'=== PAGE {i+1} ===')\\n        print(page.get_text())\\nexcept ImportError:\\n    print('PyMuPDF not available')\\n\\\"\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01XH8LHcKFqKSHebCZASpBdC\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"PyMuPDF not available\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"PyMuPDF not available\",\"language\":\"text\"},\"elapsedMs\":140}</script></tool-result></div>\n\n\n\n<div><tool-call id=\"toolu_01EpzyinpJx8GYebcnLv9PEP\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\ntry:\\n    import pdfplumber\\n    wit...[truncated, total 376 chars]\",\"intent\":\"Try pdfplumber for text extraction\"},\"intent\":\"Try pdfplumber for text extraction\",\"inputPreview\":{\"type\":\"code\",\"value\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && python3 -c \\\"\\ntry:\\n    import pdfplumber\\n    with pdfplumber.open('HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf') as pdf:\\n        for i, page in enumerate(pdf.pages):\\n            print(f'=== PAGE {i+1} ===')\\n            print(page.extract_text())\\nexcept ImportError:\\n    print('pdfplumber not available')\\n\\\" 2>&1 | head -400\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01EpzyinpJx8GYebcnLv9PEP\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"pdfplumber not available\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"pdfplumber not available\",\"language\":\"text\"},\"elapsedMs\":31}</script></tool-result></div>\n\n\n\n<div><tool-call id=\"toolu_01QLgbh5e6kZbv8E5t7B2uWs\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"which ps2ascii && ps2ascii \\\"/Users/russelllewis/Desktop/HD_JID/HD L-AMB for MCM review-REL...[truncated, total 305 chars]\",\"intent\":\"Try ps2ascii and strings for text extraction\"},\"intent\":\"Try ps2ascii and strings for text extraction\",\"inputPreview\":{\"type\":\"code\",\"value\":\"which ps2ascii && ps2ascii \\\"/Users/russelllewis/Desktop/HD_JID/HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\\" 2>&1 | head -200\\n# Also try strings as fallback\\nstrings \\\"/Users/russelllewis/Desktop/HD_JID/HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\\" | grep -v '^[^a-zA-Z]*$' | head -100\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01QLgbh5e6kZbv8E5t7B2uWs\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"%PDF-1.3\\n3 0 obj\\n<< /Filter /FlateDecode /Length 1647 >>\\nstream\\n4e\\\\U\\nm5JD\\nk*u&u\\nL^&qf\\nMUfy...[truncated, total 905 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"%PDF-1.3\\n3 0 obj\\n<< /Filter /FlateDecode /Length 1647 >>\\nstream\\n4e\\\\U\\nm5JD\\nk*u&u\\nL^&qf\\nMUfy1\\nMlCI\\nEhHh\\nZ-}.\\nY\\\\gI\\nU2A{\\n5[N1\\nCVRonf\\n\\\\Aiz\\nR8EmzR\\nt{Mn\\n.PI7\\nOh<{\\nGJ{K?~\\n^Z?=\\nL%mN\\nCFBC\\nz^*K\\n]oHT^\\nendstream\\nendobj\\n1 0 obj\\n<< /Type /Page /Parent 2 0 R /Resources 4 0 R /Contents 3 0 R /MediaBox [0 0 595 842]\\nendobj\\n4 0 obj\\n<< /ProcSet [ /PDF /Text ] /ColorSpace << /Cs1 5 0 R >> /Font << /TT1 6 0 R\\n/TT2 7 0 R >> >>\\nendobj\\n9 0 obj\\n<< /N 3 /Alternate /DeviceRGB /Length 2612 /Filter /FlateDecode >>\\nstream\\n)VdT\\n\\\"7C$\\n$n?z\\nLA\\\"S\\nyCAP8\\n\\\\2n5\\n $l$T\\nTIj\\\"]&=&\\n:dGr\\nY@^O\\n@y@yC\\nD}J}/G\\ne%e[\\n*n*|\\n0j&jaj\\n.[7A\\nSwBOK/X/_\\nk]c}\\nUx~xw\\n-bEDC\\nGME{E\\n{$vr\\nL(sYf\\n~5f5wug\\nm mH\\nVa[q`\\n6i{L{\\n:Wt>\\nx&mf\\nendstream\\nendobj\\n5 0 obj\\n[ /ICCBased 9 0 R ]\\nendobj\\n11 0 obj\\n<< /Filter /FlateDecode /Length 3481 >>\\nstream\\n+:o\\\\@\\n};\\\\e\\n*P>:d\\n6xKx\\nBSF$2\\n\\\"Va3\\n4uCb\\nWWh]\\n|;B[K~e]4\\nD\\\\UC\\ngBI4\\n@A<a\\nVD?B\\f\\nfWlw\\n)9A3$\\nXF'n\\n4x@g!\\nXE?p\\nE?U:\\n,=5u\\nNEI<\\n@8+M\\nO7JD\\nzlso\",\"language\":\"text\"},\"elapsedMs\":330}</script></tool-result></div>\n\n\n\nThe PDF has compressed/encoded streams, which means the text is not extractable with standard command-line tools available on your system. Since the PDF was created by Apple Pages, the original `.pages` file (or a `.docx` export) would be much easier to work with.\n\nCould you help me with one of these options?\n\n1. **Export from Pages as Word (.docx)** — Open the file in Pages, go to File → Export To → Word, save it to the `HD_JID` folder. I can then use `pandoc` to extract the text cleanly.\n\n2. **Export from Pages as plain text** — File → Export To → Plain Text, then save to the `HD_JID` folder.\n\n3. **Paste the text here** — Select all text in the Pages document (⌘A), copy (⌘C), and paste it into the chat.\n\nOption 1 (export as `.docx`) will give the best results — it preserves formatting, headings, tables, and figures which I can then faithfully convert to Quarto. I'll suggest some questions below.\n\n\n<span class=\"suggestion\">I've exported the paper as a .docx file into the HD_JID folder — please convert it now.</span>\n\n\n<span class=\"suggestion\">I've pasted the text of the paper below — please structure it as a Quarto document.</span>\n\n\n\n"
+          ]
+        }
+      },
+      "timestamp": 1777442116182
+    },
+    {
+      "id": "9f226db1-0b66-48b2-b1a6-ea2b13e3a941",
+      "childrenIds": [
+        "b674fe1a-dafb-4bbe-8a6c-b044048eaecd"
+      ],
+      "activeChildId": "b674fe1a-dafb-4bbe-8a6c-b044048eaecd",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "user",
+            "content": "I've exported the paper as a .docx file into the HD_JID folder — please convert it now.",
+            "providerOptions": {
+              "providerMetadata": {
+                "positai": {
+                  "timestamp": 1777442190983
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "user",
+          "content": [
+            "I've exported the paper as a .docx file into the HD_JID folder — please convert it now."
+          ]
+        }
+      },
+      "timestamp": 1777442190983
+    },
+    {
+      "id": "b674fe1a-dafb-4bbe-8a6c-b044048eaecd",
+      "childrenIds": [
+        "0d4d972a-467b-4edc-b99d-a56ed3f38b59"
+      ],
+      "activeChildId": "0d4d972a-467b-4edc-b99d-a56ed3f38b59",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01VTjTfYzXQsHcaPsJ3cm36L",
+                "toolName": "ls",
+                "args": {
+                  "path": "/Users/russelllewis/Desktop/HD_JID",
+                  "show_details": true
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 3,
+                    "cache_creation_input_tokens": 2832,
+                    "cache_read_input_tokens": 14242,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 2832,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 84,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 2832,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442191029,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 3,
+                    "outputTokens": 84,
+                    "totalTokens": 17161,
+                    "cacheReadTokens": 14242,
+                    "cacheWriteTokens": 2832,
+                    "cacheWrite5mTokens": 2832,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01VTjTfYzXQsHcaPsJ3cm36L",
+                "toolName": "ls",
+                "result": {
+                  "type": "text",
+                  "value": "        Apr 29 07:55 .git/\n 526.0K Apr 28 18:06 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.docx\n 586.6K Apr 29 06:52 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\n 117.2K Apr 29 06:52 HD_reviewers comments.pdf"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 1 tool calls this turn (soft limit: ~3)</MEMO>\n\nGot it. Let me extract the full text from the `.docx` using pandoc."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01AXZnZtCZRehKVZSSimCgjf",
+                "toolName": "bash",
+                "args": {
+                  "command": "cd \"/Users/russelllewis/Desktop/HD_JID\" && pandoc \"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.docx\" -t markdown --wrap=none 2>&1",
+                  "intent": "Extract full markdown content from the docx file"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 218,
+                    "cache_read_input_tokens": 17074,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 218,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 182,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 218,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442193292,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 182,
+                    "totalTokens": 17475,
+                    "cacheReadTokens": 17074,
+                    "cacheWriteTokens": 218,
+                    "cacheWrite5mTokens": 218,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01AXZnZtCZRehKVZSSimCgjf",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "**Does the Evidence Support High-Dose Liposomal Amphotericin B in the Treatment of Mucormycosis?**\n\nRussell E. Lewis, PharmD^1^ and Dimitrios P. Kontoyiannis, MD, ScD2^\\#^\n\n1 Department of Molecular Medicine, University of Padua, Padua Italy\n\n^2^ Department of Infectious Diseases, Infection Control, and Employee Health, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA\n\n**\\# Corresponding author**\n\nDimitrios P. Kontoyiannis, MD, ScD, Division of Internal Medicine, Department of Infectious Diseases, Infection Control and Employee Health, University of Texas MD Anderson Cancer Center, 1515 Holcombe Blvd, Unit 1460, Houston, TX 77030, USA.\n\nEmail:dkontoyi@mdanderson.org\n\n**ABSTRACT**\n\n**Introduction:** Current guidelines recommend liposomal amphotericin B (L-AMB) as first-line therapy for mucormycosis with a broad dosing range of 5-10 mg/kg/day, but uncertainty persists regarding whether higher doses improve outcomes given the increased nephrotoxicity and cost associated with dose escalation. Moreover, preclinical studies suggest delivery to some tissue may be enhanced with a high-dose induction followed by lower-dose maintenance strategy versus continued daily high doses.**\\\nAreas covered**: We examined the preclinical evidence of concentration-dependent pharmacodynamics of AMB, animal model studies demonstrating dose-response relationships, and non-linear pharmacokinetics observed in humans, where plasma drug concentrations plateau at 10 mg/kg/day and paradoxically decline at higher doses. We summarize findings from a prospective pilot trial and recent observational studies comparing standard-dose (5-6 mg/kg/day) versus high-dose (≥6 mg/kg/day) L-AMB regimens.\n\n**Expert opinion:** Despite clear dose-response relationships in animal models, observational studies have failed to demonstrate a clear survival benefit with doses \\> 5-6 mg/kg/day at increased risk of nephrotoxicity. Clinicians should prioritize standard dosing, considering escalation for specific scenarios where higher doses may be more important (e.g., CNS involvement, infection with *Cunninghamella bertholletiae*). Future research should focus on identifying patient subgroups with suboptimal L-AMB exposure, novel combination regimens, rather than empiric L-AMB dose escalation. Early diagnosis, surgical debridement and immune recovery appear to be more important for survival than L-AMB dosing intensity.\n\n**Keywords:** Liposomal amphotericin B; mucormycosis; high-dose; pharmacokinetics; nephrotoxicity; antifungal therapy; invasive fungal infection; dose optimization.\n\n**Article highlights:**\n\n- Despite clear dose-response relationships in animal models, observational studies and the Ambizygo pilot trial show no survival advantage with L-AMB doses exceeding 5-6 mg/kg/day, while nephrotoxicity (creatinine doubling in \\~40% of patients) increases significantly with dose escalation.\n\n- Plasma AUC and Cmax plateau at 10 mg/kg/day and paradoxically decline at higher doses, suggesting saturable distribution pathways---meaning higher doses may not deliver more biologically active drug to target tissues like lungs, sinuses, or brain.\n\n- Characterizing L-AMB pharmacokinetic-pharmacodynamic relationships in mucormycosis is challenging because tissue-specific liposomal uptake and drug release kinetics---both influenced by local infectious burden and microenvironmental factors---determine microbiologically-active tissue concentrations in ways that cannot be inferred from serum measurements.\n\n- Clinicians should use L-AMB 5-6 mg/kg/day as the initial dose for most patients, reserving escalation only for specific scenarios (CNS or bone involvement, suspected suboptimal exposure) where close renal monitoring is feasible.\n\n- Prospective PK studies with tissue sampling, identification of patient subgroups with suboptimal exposure, and evaluation of novel combination regimens or induction-maintenance strategies warrant further investigation rather than empiric dose escalation.\n\n- Research should move toward exposure-guided dosing strategies, novel combinations (isavuconazole, ibrexafungerp, manogepix), and host-directed therapies rather than simple dose-response paradigms.\n\n**1. Introduction**\n\nInvasive mucormycosis, caused primarily by *Rhizopus, Mucor*, and *Lichtheimia* species of the order Mucorales, is a life-threatening fungal infection that has increased in incidence over the past two decades, predominantly affecting immunocompromised patients with hematologic malignancies, solid organ or hematopoietic cell transplantation, and poorly controlled diabetes mellitus \\[1\\]. Characterized by aggressive angioinvasion and tissue necrosis, mucormycosis carries mortality rates of 40-80% depending on infection site, diagnostic and treatment delays, feasibility of surgical debridement, and host immune recovery \\[2,3\\]. Current guidelines recommend initial therapy with intravenous liposomal amphotericin B (L-AMB) until clinical stabilization, followed by step-down to posaconazole or isavuconazole \\[4,5\\].\n\nDue to the aggressiveness of the infection, higher L-AMB doses (\\>5-6 mg/kg/day) are frequently recommended during the acute treatment phase of infection to rapidly load infected tissue to limit fungal invasion and dissemination \\[6\\]. While experimental animal models demonstrate a clear dose-response relationship for L-AMB \\[7\\], prospective trials and observational studies \\[8--10\\] have not shown improved outcomes with higher L-AMB dosing. Yet current guidelines for management of mucormycosis recommend a broad initial dosing range for liposomal amphotericin B of 5-10 mg/kg/day with avoidance of slow de-escalation of the dose \\[5\\].\n\nUncertainty regarding the optimal dosing of L-AMB is clinically important as higher doses often carry increased risks of nephrotoxicity and higher drug costs \\[3\\]. In this review, we critically evaluate the pharmacokinetic, preclinical, and clinical evidence supporting dose escalation, examine patient-specific factors that may influence the benefit-risk ratio of high-dose L-AMB therapy for mucormycosis, and provide practical recommendations for individualizing dosing of this essential antifungal medication. For the purposes of this review, we define \"standard-dose\" L-AMB as 5-6 mg/kg/day (the minimum recommended dose in current guidelines and listed in package labeling) and \"high-dose\" as \\>6 mg/kg/day. Where specific studies used different thresholds (e.g., ≥7 mg/kg/day or 10 mg/kg/day), we explicitly state the threshold used in that study.\n\n**2. Methods**\n\nThis narrative review synthesizes evidence from PubMed/MEDLINE searches using terms including \\'liposomal amphotericin B,\\' \\'mucormycosis,\\' \\'dose,\\' \\'pharmacokinetics,\\' and \\'pharmacodynamics,\\' supplemented by reference mining and expert knowledge of the field. We prioritized: (1) prospective clinical trials; (2) large retrospective cohorts with multivariate adjustment; (3) pharmacokinetic/pharmacodynamic studies in humans; and (4) animal model studies directly comparing L-AMB dose-response relationships. This is a narrative rather than systematic review; therefore, study selection was not protocol-driven but aimed to provide comprehensive coverage of the relevant evidence base.\n\n**3. Pharmacodynamics of liposomal amphotericin B**\n\nAmphotericin B (AMB) is a polyene macrolide antifungal agent with broad-spectrum activity against most clinically relevant fungi. Its amphiphilic structure renders it insoluble in body fluids at a neutral pH. The primary mechanism of antifungal action has long thought to involve binding to ergosterol in fungal cell membranes, forming transmembrane channels that disrupt membrane integrity and cause lethal ion leakage, particularly of potassium. However, more recent studies using solid-state NMR suggest amphotericin B forms extramembrane aggregates or \"sponges\" that extract ergosterol from the fungal cell wall \\[11,12\\]. When incorporated into a liposome, the polyene remains inside the liposome carrier until drug is released when the intact liposome encounters ergosterol in the fungal cell membrane \\[13\\].\n\nCompared to conventional amphotericin-B deoxycholate formulations, clinical use of L-AMB is associated with fewer delayed (2-6 hour) infusion-related reactions mediated by proinflammatory cytokines (e.g., Interleukin (IL-1ß, IL-6, IL-8) and prostaglandin E2 release. However, an immediate unique type-1 hypersensitivity reaction termed \"complement activation-related pseudo allergy\" (CARPA) can develop within minutes of L-AMB infusion characterized by a triad of symptoms including: (1) chest pain, dyspnea, hypoxia; (2) abdominal, flank, or leg pain; and (3) flushing and urticaria \\[14\\]. Amphotericin B-associated nephrotoxicity, which arises through constriction of renal arterioles and damage to the distal tubular membranes, results in loss of potassium, magnesium, and bicarbonate that can progress renal tubular acidosis and decreased glomerular filtration. The onset is delayed with the liposomal formulation due to the preferential distribution of the drug to organs rich in reticuloendothelial cells and lack of glomerular filtration of the liposome carrier \\[15\\].\n\nPatients receiving liposomal amphotericin B (L-AMB) require daily monitoring of serum creatinine, potassium, and magnesium. Dose reduction or extended dosing intervals should be considered if creatinine rises to more than twice baseline or exceeds 2.0 mg/dL. Kidney protection strategies include avoiding other nephrotoxic drugs (aminoglycosides, calcineurin inhibitors, contrast agents) and administering intravenous saline before infusions, although the volume must often be titrated to patient's cardiovascular function. Importantly, the acceptable threshold for kidney injury depends on disease severity: in life-threatening infections such as mucormycosis, maintaining adequate antifungal exposure may take priority over kidney protection, whereas more conservative approaches are reasonable in less severe cases or when effective alternative agents are available.\n\nAmphotericin B exhibits concentration-dependent killing and prolonged post-antifungal effects in yeast and molds, with antifungal activity linked to the C~max~/MIC and AUC~0-24~/MIC of the dosing regimen- thus supporting the concept that higher, infrequently administered dosing regimens will exhibit better antifungal efficacy \\[16--18\\]. In neutropenic and rabbit models of aspergillosis, near-maximal antifungal efficacy is observed when the total serum amphotericin B concentrations C~max~/MIC surpasses 2.5 or and AUC~0-24~/MIC of 13.6 \\[19\\]. However, encapsulation of amphotericin B in the unilamellar liposomes changes the pharmacokinetics and pharmacodynamics of the drug, reducing drug interactions with mammalian cell membranes while enhancing tissue distribution and reducing toxicity compared with conventional amphotericin B deoxycholate \\[20\\]. Hence, the relationship between serum drug concentrations, which contain both non-biologically active drug encased inside liposomes and free drug versus microbiologically-active tissue concentrations is variable and dependent on tissue-specific liposomal uptake, drug release kinetics, and local microenvironmental factors \\[20\\].\n\nFew studies have explored the pharmacodynamics of escalating L-AMB doses in animal models of mucormycosis. Using a neutropenic mouse model of pulmonary mucormycosis, Lewis et al. \\[7\\] reported improved clearance of *Rhizopus oryzae* lung fungal burden as daily intravenous doses of L-AMB increased from 5 mg/kg to 10 mg/kg daily. Fungal clearance correlated with lung tissue homogenate concentrations of AMB surpassing the mean fungicidal concentration (MFC) of the R. oryzae isolate (8 mg/L) inoculated in animals. Interestingly, total lung concentrations of amphotericin B decreased after 72 hours as fungal burden declined despite sustained 10 mg/kg/day dosing, suggesting possible saturation of drug accumulation in the lung or decreased distribution of the liposomes to the lung with fungal clearance.\n\nSimilar animal studies have explored initial dosage escalation (10 mg/kg/day x 72 hours) followed by de-escalation to 3 mg/kg/day daily doses to treat \\\"resistant\\\" pathogens such as *Aspergillus terreus*. Lewis et al found that a 10 mg/kg /day x 72 hours induction-deescalation strategy resulted in greater reduction in lung fungal burden versus daily L-AMB doses of 10-20 mg/kg/day \\[21\\]. Interestingly, total amphotericin B lung tissue homogenate concentrations were higher at Day+7 of infection in the 10 → 3 mg/kg/day dosing group versus animals that received 10 mg/kg/day sustained dosing. A possible explanation relates to L-AMB\\'s multicompartmental pharmacokinetics and tissue distribution patterns. Initial high doses rapidly saturate the reticuloendothelial system (liver, spleen), allowing subsequent doses to distribute more proportionally to other tissues including the lung. With continued high-dose administration, ongoing RES uptake may \"compete\" with lung distribution \\[20\\]. Additionally, lower maintenance doses after initial loading may result in less rapid redistribution from tissues back to plasma for elimination. This finding supports the biological plausibility of induction-maintenance dosing strategies, though clinical validation remains lacking. In their review of animal model studies, Adler-Moore and colleagues described clear patterns of non-linear tissue uptake of L-AMB or/or differential saturated uptake with higher dosing \\[15\\].\n\nStudies using diabetic ketoacidosis and pulmonary mucormycosis infection models by Ibrahim\\'s research group at UCLA \\[22--27\\] and Takemoto et al. \\[28\\] have confirmed that L-AMB doses ≥10 mg/kg/day achieve superior tissue fungal clearance compared to lower doses, particularly in the central nervous system. In a review of L-AMB tissue penetration data from animal models, Adler-Moore et al. noted that accumulation of L-AMB in tissue increases in a dose-dependent manner \\[15\\]. However, the dose-response relationship varied by organ, exhibiting linear kinetics in some tissues and non-linear kinetics in others, influenced by both animal species and infection status. The liver and spleen consistently showed the highest drug retention across all animal infection models.\n\nSeveral important limitations must be considered when extrapolating preclinical dose-response findings to clinical practice. Murine models of mucormycosis typically employ standardized immunosuppression regimens (neutropenia or diabetic ketoacidosis) that do not fully reflect the heterogeneous immune states encountered in patients with hematologic malignancies, solid organ transplantation, or uncontrolled diabetes. Furthermore, antifungal therapy in animal models is generally initiated shortly after experimental infection, whereas clinical diagnosis of mucormycosis is frequently delayed, potentially altering the relationship between drug exposure and therapeutic response. Finally, patient-specific factors affecting L-AMB distribution and elimination, including obesity, critical illness, fluid overload, and concurrent nephrotoxic medications---are not captured in preclinical models, limiting the direct applicability of animal-derived pharmacodynamic targets to individualized dosing decisions.\n\n**4. Should L-AMB dosing in mucormycosis be genus or species specific?**\n\nThe concept of using higher antifungal doses to treat yeast and some resistant *Aspergillus* spp. is generally accepted for triazole antifungals but not established for L-AMB even for these more common fungal infections. Frequently clinicians must empirically initiate L-AMB therapy for suspected mucormycosis based on rapidly progressing clinical or radiographic signs - e.g., breakthrough sinusitis on *Aspergillus*-active antifungal therapy, hard palate or nasal bridge necrosis, reverse halo sign on computed tomography- before an infecting isolate is recovered and identified to the species level. No studies have demonstrated the utility of *in vitro* susceptibility testing for guiding amphotericin B dosing \\[5\\]*. In vitro* susceptibility testing reveals modest MIC differences among Mucorales genera, with *Rhizopus* and *Mucor* species demonstrating similar susceptibility profiles, while *Cunninghamella* and *Lichtheimia* species tend to exhibit higher MICs \\[29\\]. As discussed previously, animal model studies consistently demonstrate equivalent efficacy of L-AMB at 10-15 mg/kg against both *Rhizopus* and *Mucor* species, with no differential dosing required to achieve comparable survival and tissue burden reductions. *Cunninghamella bertholletiae* may be an exception, demonstrating reduced in vitro susceptibility to AMB (geometric mean MIC 2 µg/mL vs. \\< 1 2 µg/mL for *Rhizopus, Lichtheimia and Mucor* ) higher clinical mortality despite standard therapy in several case series \\[29\\]. However, clinical outcome data stratified by species remain limited, and no studies have tested whether dose escalation improves outcomes for less susceptible species. Notably, the large Japanese nationwide analysis of 82 patients found that species of Mucorales had no detectable effect on survival; instead, prolonged neutropenia and persistent hyperglycemia were the factors most strongly associated with clinical outcome \\[10\\]. While species identification may inform prognosis, current data are insufficient to recommend species-specific dosing adjustments. For CNS involvement, higher doses may be warranted due to limited blood-brain barrier penetration rather than species-specific considerations. We acknowledge this as an important area for future research, particularly prospective studies correlating species-level MIC data with clinical outcomes and drug exposure.\n\n**5. Human pharmacokinetics**\n\nFollowing intravenous administration, liposomal amphotericin B (L-AMB) maintains its physicochemical integrity circulating in the bloodstream over extended periods, resulting in prolonged residence time within the central compartment (Figure 1). The drug is then taken up primarily by organs rich in reticuloendothelial cells (i.e. liver, spleen) and then redistributes to other body compartments including the lung, kidney and central nervous system.\n\nThe drug exhibits non-linear pharmacokinetics with substantial interpatient pharmacokinetic variability across therapeutic doses. At doses of 1.0, 2.5, 5.0, and 7.5 mg/kg, first-day mean AUCs increased disproportionally (32, 71, 294, and 534 µg·h/mL, respectively) . Concurrently, mean plasma clearance declined at higher doses, decreasing from 39-51 mL/h/kg at 1.0-2.5 mg/kg/day to 21-25 mL/h/kg at 5.0-7.5 mg/kg/day \\[30\\]. There are relatively few data describing how the distribution of L-AMB changes over time- i.e. whether saturation in tissue update alters the distribution of the drug \\[20\\].\n\nThe non-linear behavior of L-AMB pharmacokinetic becomes more pronounced with further dose escalation. A subsequent Phase I/II trial evaluating 10, 12.5, and 15 mg/kg/day L-AMB in patients with invasive mold infections reported mean AUC and Cmax values plateaued at 10 mg/kg/day and paradoxically declined at doses of 12.5 and 15 mg/kg/day, indicating saturable distribution or elimination pathways \\[30\\]. Therefore, it is unclear whether L-AMB daily dosages exceeding 10 mg/kg distribute more drug to target organs such as the lung, sinuses or brain, which are the most frequent sites of infection in invasive mucormycosis. Finally, human PK studies showed that, compared to AMB-deochycolate, liposomal AMB increases total AMB concentrations while decreasing unbound AMB concentrations in plasma as a result of sequestration of the drug in long-circulating liposomes \\[31,32\\] however the clinical significance of this is uncertain**.** Table 1 provides an overview of the pharmacokinetic and pharmacodynamic properties of liposomal AMB**.**\n\nEstablishing meaningful pharmacokinetic-pharmacodynamic relationships for liposomal amphotericin B (L-AMB) is complicated by several factors. Routine assays measure total plasma amphotericin B concentrations, yet the pharmacologically active fraction is the free (unbound) drug; amphotericin B exhibits complex protein binding that includes association with lipoproteins, making free concentrations difficult to determine reliably. More fundamentally, the relationship between plasma and tissue exposure is problematic for L-AMB due to preferential uptake by the reticuloendothelial system (liver, spleen, bone marrow), meaning that higher plasma concentrations do not necessarily translate to proportionally higher concentrations at infected tissue sites---particularly those outside the reticuloendothelial system such as lung, brain, or sinus tissue. These factors collectively limit the utility of plasma drug monitoring and help explain why clear concentration-response relationships have been difficult to establish for L-AMB in clinical studies.\n\n**6. Clinical studies**\n\nSeveral observational studies and one prospective pilot study evaluated clinical outcomes following administration of HD L-AMB (Table 2). The most informative trial to date was a pilot study lead by Lanternier et al. (Ambizygo trial), which prospectively evaluated high-dose liposomal amphotericin B (10 mg/kg/day) for 4 weeks in 33 patients with mucormycosis, with 71% undergoing surgical debridement \\[8\\]. The overall response rate was 36% at week 4 and 45% at week 12, with mortality rates of 38% and 53% at weeks 12 and 24, respectively. Creatinine doubling occurred in 40% of patients, though renal dysfunction was reversible in 63% within 3 months. This study demonstrated that high-dose L-AMB combined with surgery achieved response rates comparable to other first-line therapies, despite increased but manageable nephrotoxicity. Risk for nephrotoxicity could be influenced by the underlying host as it was more common in patients with diabetes mellitus. Toxicity can be host dependent, seen more commonly in the diabetes subgroup \\[8\\]. It is unclear of nephrotoxicity is seen at an earlier point after the initiation of high-dose L AMB compared to patients who receive regular doses of L-AMB.\n\nAlthough not specific for mucormycosis, the AmBiLoad trial was a randomized, double-blind study of 201 patients with invasive mold infections (97% aspergillosis) comparing liposomal amphotericin B at 3 mg/kg/day versus 10 mg/kg/day for 14 days followed by 3 mg/kg/day \\[33\\]. No significant differences in favorable response (50% vs 46%) or 12-week survival (72% vs 59%) were observed between standard and high-dose groups, while nephrotoxicity (14% vs 31%, P\\<0.01) and grade 3 hypokalemia (16% vs 30%, P=0.015) were significantly higher in the high-dose group. The trial established that 3 mg/kg/day liposomal amphotericin B is effective for invasive aspergillosis with no additional benefit from dose escalation to 10 mg/kg/day.\n\nRetrospective observational studies of invasive mucormycosis have failed to identify a signal of improved outcomes for patients treated with higher versus standard doses of L-AMB (Table 2) \\[3,10,34--37\\] However, interpretation of patient outcomes is confounded by unstandardized diagnosis, frequent use or combination therapy and surgical resection, and differences in host immunosuppression and underlying disease status.\n\n**7. Scenarios where dosage escalation may still be considered**\n\nWhile the available evidence does not support routine dose escalation of liposomal amphotericin B, certain clinical scenarios may warrant consideration of higher doses on an individualized basis. These include: CNS involvement, bone or osteoarticular infections where adequate tissue penetration is uncertain; progressive disease despite standard dosing when surgical debridement is not feasible; and patients infected with *Cunninghamella.* It should be emphasized that these considerations represent expert opinion in the absence of controlled data, and the decision to escalate dosing must weigh potential benefits against increased nephrotoxicity risk in each individual patient.\n\n**8. Conclusions**\n\nCollectively, there remains little evidence that higher-dose (\\>5-6 mg/kg/day) L-AMB improves outcomes for mucormycosis. While preclinical models demonstrate broad dose-dependent efficacy, observational retrospective studies and the pilot AmBizygo pilot trial have failed to demonstrate improved survival with dose escalation beyond 5 mg/kg/day, despite increased nephrotoxicity risks. Several key knowledge gaps must be addressed to optimize L-AMB dosing strategies for this devastating infection.\n\nFirst, the non-linear pharmacokinetics and apparent plateau in tissue distribution at doses exceeding 10 mg/kg/day warrant further investigation through prospective pharmacokinetic studies with tissue sampling. Understanding whether higher doses deliver more biologically active amphotericin B to target sites such as lungs, sinuses, and brain, the most common sites of mucormycosis---is critical. Pharmacokinetic studies have also not explored more chronic phases of the infection, when tissue uptake of L-AMB may be saturated versus acute phases of the infection. Studies measuring free (non-liposome encapsulated) amphotericin B concentrations in infected tissues, rather than total drug concentrations, would provide more relevant pharmacodynamic targets. Moreover, identifying patient subgroups who achieve suboptimal drug exposure at standard doses---potentially due to high body weight, critical illness, or extracorporeal membrane oxygenation---may reveal populations who could benefit from dose escalation or shorter \"induction\" phases of high-dose treatment.\n\nThird, prospective randomized controlled trials comparing standard (5 mg/kg/day) versus high-dose (10 mg/kg/day) L-AMB remains the gold standard for establishing optimal dosing but face significant feasibility challenges given the rarity and heterogeneity of mucormycosis. Collaborative international registry studies with standardized treatment protocols and detailed pharmacokinetic sampling could provide valuable real-world evidence. Ideally, such studies should stratify patients by infection site (particularly CNS involvement, where higher doses are commonly recommended), underlying immunosuppression, and timing of surgical debridement to identify patient-specific factors that modify the dose-response relationship. Notably recent studies have shown that infrequent high-dosages of L-AMB (10 mg/kg once weekly) are as effective in the treatment of cryptococcal meningoencephalitis \\[38\\], but the evidence supporting the efficacy of these regimens was based on a pharmacodynamic (early fungicidal activity in the cerebral spinal fluid) rather than pharmacokinetic endpoints \\[39\\]. Therefore, it is unclear whether similar dosing strategies can be adopted for the treatment mucormycosis without similar pharmacodynamic biomarkers.\n\nFourth, the observational studies reviewed demonstrate that surgical debridement is more strongly associated with survival than antifungal dosing regimen- although confounding by indication bias may overestimate the benefits of surgery in this analysis. Future research should focus on integrated treatment strategies that optimize the synergy between surgical source control and antifungal therapy. Studies examining whether escalation specifically benefits patients with unresectable disease or delayed surgical intervention would address a clinically relevant question.\n\nFifth, novel amphotericin B formulations or combination regimens may overcome the limitations of current L-AMB dosing. Although recent observational studies have not found a major benefit for combinations of L-AMB with echinocandins or triazoles in mucormycosis \\[40\\] , animal models have demonstrated improved survival and fungal clearance when L-AMB is combined with isavuconazole \\[24\\] , the glucan synthesis inhibitor ibrexafungerp \\[25\\] , and the (GPI)-anchor biosynthesis pathway inhibitor manogepix \\[26\\]. Additionally, host-directed therapies that block fungal invasion through CotH proteins or neutralize mycotoxins \\[41\\] should be explored as adjuncts to standard-dose antifungal therapy. Novel Immunotherapeutic approaches including checkpoint inhibitor therapy \\[42\\] or chimeric antigen T- cell approaches could be effective \"living antifungals\" \\[43\\] after initial treatment with L-AMB. Finally, economic analyses comparing the costs of high-dose L-AMB therapy (including management of nephrotoxicity and potential renal replacement therapy) against marginal clinical benefits are needed to inform rational resource allocation, particularly in resource-limited settings where mucormycosis incidence may be highest. The development of novel oral formulation of AMB with potentially less nephrotoxicity will open the door to potential \"step down\" therapy with polyenes \\[44\\] .\n\nBased on current evidence, clinicians should consider 5-6 mg/kg/day as an appropriate initial L-AMB dose for most patients with mucormycosis, with dose escalation reserved for selected situations where compelling clinical rationale exists (such as CNS or bone involvement \\[45\\] or suspected suboptimal drug exposure) and close monitoring of renal function is feasible. Treatment decisions should prioritize early diagnosis, prompt surgical debridement when feasible, and reversal of underlying immunosuppression over empiric dose escalation. Future research must move beyond simple dose-response paradigms to embrace personalized, exposure-guided dosing strategies informed by robust pharmacokinetic-pharmacodynamic relationships and patient-specific risk factors.\n\n**Plain language summary:**\n\nMucormycosis is a rare but deadly fungal infection primarily affecting immunocompromised patients that is treated with surgery and an antifungal medication called liposomal amphotericin B, with ongoing debate about whether higher drug doses improve survival despite increased kidney damage risks. While laboratory studies in mice demonstrated that higher doses killed more fungus in infected tissues, multiple recent clinical studies in humans found no survival difference between patients receiving standard doses (5 mg/kg/day) versus higher doses (6-15 mg/kg/day), and the drug's complex behavior in the body means extra doses may not actually reach infected tissues effectively. Based on current evidence, doctors should use standard doses for most patients and focus instead on rapid diagnosis, surgical removal of infected tissue, and helping patients' immune systems recover, as these factors are more strongly associated with survival than higher antifungal doses.\n\n**Author contribution statement:** Russell E. Lewis: Literature review, Writing - original draft, Writing - review & editing. Dimitrios P. Kontoyiannis: Conceptualization, Writing - review & editing.\n\n**Funding statement:** No funding was received for the article\n\n**Disclosures:** D.P.K. reports research support from Basilea and Astellas Pharma. He also received consultant fees from Basilea, Inc, Knight, Inc, Biosegren, Inc, Pulmocide Inc, Avir Pharma, Inc and is a member of the Data Review Committee for MundiPharma Therapeutics, the (MSG-ERC). He also serves as the president of Mycoses Study Group Research Consortium. \n\n**DPK** acknowledges the Robert C Hickey endowment\n\n**Table 1: Pharmacokinetic and pharmacodynamic properties of liposomal amphotericin B**. Data are from references \\[20,30--32\\]\n\n  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n  **Characteristic**                           **Liposomal Amphotericin B**\n  -------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n  Formulation                                  Small (60-80 nm) unilamellar liposomes consisting of distearoyl phosphatidylglycerol, cholesterol, and hydrogenated soy phosphatidylcholine; in a 2:1:0.8 molar ratio and AmB in a 9:1 lipid:drug molar ratio\n\n  Pharmacodynamics                             Cmax/MIC, AUC/MIC\n\n  Free (non-liposomal bound drug) in plasmaa   \\<25 ng/mL\n\n  Mean Cmax mg/Lb                              58\n\n  Mean AUC0-24h mg/Lxhb                        713\n\n  Mean CLt L/h/kgb                             0.017\n\n  Dose linearityc                              Up to 10 mg/kg/day in adults\n\n  Metabolism                                   Not metabolized\n\n  Elimination                                  Unchanged feces and urine (\\< 10% over one week)\n\n  Dosage adjustment in renal impairment        No adjustment for accumulation concerns\n\n  Dosage adjustment in hepatic impairment      No adjustment for accumulation concerns\n  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n**Table 2: Clinical studies evaluating high-dose liposomal amphotericin B for mucormycosis^a^**\n\n  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n  Author- year                     Study design                                                                                        L-AMB treatment regimen                                                                      Outcomes\n  -------------------------------- --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n  Lanternier et al. 2015 \\[8\\]     Prospective, multicenter pilot study; n=40 patients; most hematologic malignancy, 33% neutropenic   10 mg/kg/day for median of 13.5 days (range 0-28)                                            Response rate (n=33 patients at week 4) 38% overall mortality at week 12 and 53% at week 24 SeCr doubling in 40% of patients\n\n  Valiante et al al. 2023 \\[34\\]   Retrospective cohort study; (n=67 adults with probable/proven mucormycosis                          L-AMB \\< 6 mg/kg/day vs. ≥ 6 mg/kg/day                                                       12-week mortality rate 49 vs. 50%. Similar rates of acute kidney injury (47% v.s 50%)\n\n  Tashiro et al. 2023 \\[10\\]       Retrospective multicenter nationwide cohort analysis n=82 cases                                     L-AMB 5 mg/kg/day vs. ≥ 5 mg/kg/day                                                          No difference in survival between patients receiving liposomal amphotericin B at 5 mg/kg/d relative to those receiving \\>5 mg/kg/d (P = .625). In analysis adjusting for confounders, the hazard ratio for the influence of \\>5 mg/kg/d liposomal amphotericin B on 4-week survival was 0.86 (95% CI, 0.28--2.68; P = .796) compared with 5 mg/kg/d.\n\n  Stover et al. 2024 \\[35\\]        Single-center case series, mixed population                                                         L-AMB mean 8.9 mg/kg/day for 11 days                                                         Response rate 33% one-third of patients developed doubling baseline serum creatine\n\n  Jeong et al. 2019 \\[3\\]          Systematic review of 851 published cases, mixed population                                          n=57 received high-dose L-AMB (6--15 mg/kg/day)                                              Patients receiving L-AmB doses at \\> 5 mg/kg/day experienced higher 90-day mortality, although not statistically significant \\[22/57 (38.6%) vs. 29/93 (31.2%); P = 0.352\\]. In addition, renal toxicity was more common following administration of higher-dose i.v. L-AmB \\[15/57 (26.3%) vs. 12/93 (12.9%); P = 0.038\n\n  Elitzuer et al 2021 \\[36\\]       Retrospective analysis of 12 pediatric cases, mixed population                                      N=5/12 (42%) received HD L-AMB during treatment only 1/5 (20%) as monotherapy                4/5 (80%) of patients survived with HD L-AMB vs. 4/5 died with standard dose of L-AMB (3/5 in combination with triazole or echinocandin)\n\n  Risum et al. 2020 \\[37\\]         Retrospective analysis of 13 patients with invasive mucormycosis                                    3/13 received HD L-AMB for suspected CNS involvement in combination with other antifungals   3/3 response (100%) with HD-L-AMB vs. 10/13 standard dose (77%)\n  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n^a^ This summary table included heterogenous populations, dosing regimens and outcome measures- therefore direct comparisons across studies may not be warranted.\n\n![](media/image1.png){width=\"4.340277777777778in\" height=\"4.1305555555555555in\"}\n\n**Figure 1: Pharmacokinetic model of liposomal amphotericin B**. Following intravenous administration, liposomal amphotericin B distributes from the central compartment (1, plasma) to reticuloendothelial system organs including the liver, spleen, and bone marrow (compartment 2), and to kidney, lung and other peripheral tissues (compartment 3). Rate constants (k) indicate bidirectional transfer between compartments: *k12* and *k21* represent distribution and redistribution between plasma and reticuloendothelial organs; *k13* and *k31* between plasma and peripheral tissues; and *k23* and *k32* between reticuloendothelial organs and peripheral tissues. Drug elimination occurs from the central compartment via biliary and urinary excretion (dotted arrow). Figure adapted from Groll et al. \\[20\\]\n\n**REFERENCES**\n\n\\[1\\] Skiada A, Drogari-Apiranthitou M, Roilides E, et al. A Global Analysis of Cases of Mucormycosis Recorded in the European Confederation of Medical Mycology / International Society for Human and Animal Mycology (ECMM / ISHAM) Zygomyco.net Registry from 2009 to 2022. Mycopathologia. 2025;190(4):53.\n\n\\*\\* Recent update on the epidemiology of mucormycosis\n\n\\[2\\] Sigera LSM, Denning DW. A Systematic Review of the Therapeutic Outcome of Mucormycosis. Open Forum Infect Dis. 2023;11(1).\n\n\\[3\\] Jeong W, Keighley C, Wolfe R, et al. The epidemiology and clinical manifestations of mucormycosis: a systematic review and meta-analysis of case reports. Clin Microbiol Infect. 2019;25(1):26--34.\n\n\\[4\\] Skiada A, Lanternier F, Groll AH, et al. Diagnosis and treatment of mucormycosis in patients with hematological malignancies: guidelines from the 3rd European Conference on Infections in Leukemia (ECIL 3). Haematologica. 2013;98(4):492--504.\n\n\\[5\\] Cornely OA, Alastruey-Izquierdo A, Arenz D, et al. Global guideline for the diagnosis and management of mucormycosis: an initiative of the European Confederation of Medical Mycology in cooperation with the Mycoses Study Group Education and Research Consortium. Lancet Infect Dis. 2019;19(12):e405--e421.\n\n\\[6\\] Kontoyiannis DP, Lewis RE. How I treat mucormycosis. Blood. 2011;118(5):1216--1224.\n\n\\[7\\] Lewis RE, Albert N, Liao G, et al. Comparative pharmacodynamics of amphotericin B lipid complex and liposomal amphotericin B in a murine model of pulmonary mucormycosis. Antimicrobial Agents and Chemother. 2010;54(3):1298--1304.\n\n\\[8\\] Lanternier F, Poiree S, Elie C, et al. Prospective pilot study of high-dose (10 mg/kg/day) liposomal amphotericin B (L-AMB) for the initial treatment of mucormycosis. J Antimicrob Chemother. 2015;70(11):3116--3123.\n\n\\*\\* Key prospective study investing standard-dose versus high-dose L-AMB for mucormycosis\n\n\\[9\\] Spellberg B, Ibrahim AS, Chin-Hong PV, et al. The Deferasirox-AmBisome Therapy for Mucormycosis (DEFEAT Mucor) study: a randomized, double-blinded, placebo-controlled trial. J Antimicrob Chemother. 2012;67(3):715--722.\n\n\\[10\\] Tashiro M, Namie H, Ito Y, et al. Prognostic Association of Liposomal Amphotericin B Doses Above 5 mg/kg/d in Mucormycosis: A Nationwide Epidemiologic and Treatment Analysis in Japan. Open Forum Infectious Diseases. 2023;10(10).\n\n\\[11\\] Anderson TM, Clay MC, Cioffi AG, et al. Amphotericin forms an extramembranous and fungicidal sterol sponge. Nat Chem Biol \\[Internet\\]. 2014;10(5):400--406.\n\n\\[12\\] Lewandowska A, Soutar CP, Greenwood AI, et al. Fungicidal amphotericin B sponges are assemblies of staggered asymmetric homodimers encasing large void volumes. Nat Struct Mol Biol. 2021;28(12):972--981.\n\n\\[13\\] Walker L, Sood P, Lenardon MD, et al. The Viscoelastic Properties of the Fungal Cell Wall Allow Traffic of AmBisome as Intact Liposome Vesicles. mBio. 2018;9(1):e02383-17.\n\n\\[14\\] Szebeni J. Complement activation-related pseudoallergy: a new class of drug-induced acute immune toxicity. Toxicology. 2005;216(2--3):106--121.\n\n\\[15\\] Adler-Moore J, Lewis RE, Brüggemann RJM, et al. Preclinical Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Antifungal Activity of Liposomal Amphotericin B. Clinical Infectious Diseases. 2019;68:S244--S259.\n\n\\[16\\] Andes D, Safdar N, Marchillo K, et al. Pharmacokinetic-pharmacodynamic comparison of amphotericin B (AMB) and two lipid-associated AMB preparations, liposomal AMB and AMB lipid complex, in murine candidiasis models. Antimicrob Agents Chemother. 2006;50(2):674--684.\n\n\\[17\\] Andes D, Stamsted T, Conklin R. Pharmacodynamics of amphotericin B in a neutropenic-mouse disseminated-candidiasis model. Antimicrob Agents Chemother. 2001;45(3):922--926.\n\n\\[18\\] Wiederhold NP, Tam VH, Chi J, et al. Pharmacodynamic activity of amphotericin B deoxycholate is associated with peak plasma concentrations in a neutropenic murine model of invasive pulmonary aspergillosis. Antimicrob Agents and Chemother. 2006;50(2):469--473.\n\n\\[19\\] Al-Nakeeb Z, Petraitis V, Goodwin J, et al. Pharmacodynamics of amphotericin B deoxycholate, amphotericin B lipid complex, and liposomal amphotericin B against Aspergillus fumigatus. Antimicrob Agents Chemother. 2015;59(5):2735--2745.\n\n\\[20\\] Groll AH, Rijnders BJA, Walsh TJ, et al. Clinical Pharmacokinetics, Pharmacodynamics, Safety and Efficacy of Liposomal Amphotericin B. Clin Infect Dis. 2019;68(Supplement_4):S260--S274.\n\n\\[21\\] Lewis RE, Albert NP, Liao G, et al. High-dose induction liposomal amphotericin B followed by de-Escalation is effective in experimental Aspergillus terreus pneumonia. J of Antimicrob Chemothera. 2013;68(5):1148--1151.\n\n\\[22\\] Ibrahim AS, Gebremariam T, Fu Y, et al. Combination echinocandin-polyene treatment of murine mucormycosis. Antimicrob Agents Chemother. 2008;52(4):1556--1558.\n\n\\[23\\] Luo G, Gebremariam T, Lee H, et al. Efficacy of liposomal amphotericin B and posaconazole in intratracheal models of murine mucormycosis. Antimicrob Agents Chemother. 2013;57(7):3340--3347.\n\n\\[24\\] Gebremariam T, Gu Y, Singh S, et al. Combination treatment of liposomal amphotericin B and isavuconazole is synergistic in treating experimental mucormycosis. J Antimicrob Chemother. 2021;76(10):2636--2639.\n\n\\[25\\] Gebremariam T, Alkhazraji S, Gu Y, et al. Ibrexafungerp is efficacious in a neutropenic murine model of pulmonary mucormycosis as monotherapy and combined with liposomal amphotericin B. Antimicrob Agents Chemother. 2024;68(5):e0154523.\n\n\\[26\\] Gebremariam T, Gu Y, Alkhazraji S, et al. The Combination Treatment of Fosmanogepix and Liposomal Amphotericin B Is Superior to Monotherapy in Treating Experimental Invasive Mold Infections. Antimicrob Agents Chemother. 2022;66(7):e0038022.\n\n\\[27\\] Gu Y, Gebremariam T, Alkhazraji S, et al. Efficacy of an oral lipid nanocrystal formulation of amphotericin B (MAT2203) in the neutropenic mouse model of pulmonary mucormycosis. Antimicrob Agents Chemother. 2024;68(6):e0154023.\n\n\\[28\\] Takemoto K, Yamamoto Y, Kanazawa K. Comparative study of the efficacy of liposomal amphotericin B and amphotericin B deoxycholate against six species of Zygomycetes in a murine lethal infection model. J Infect Chemother. 2010;16(6):388--395.\n\n\\[29\\] Guinea J, Escribano P, Vena A, et al. Increasing incidence of mucormycosis in a large Spanish hospital from 2007 to 2015: Epidemiology and microbiological characterization of the isolates. PLoS ONE. 2017;12(6):e0179136.\n\n\\[30\\] Walsh TJ, Yeldandi V, McEvoy M, et al. Safety, tolerance, and pharmacokinetics of a small unilamellar liposomal formulation of amphotericin B (AmBisome) in neutropenic patients. Antimicrob Agents Chemother. 1998;42(9):2391--2398.\n\n\\[31\\] Bekersky I, Boswell GW, Hiles R, et al. Safety and toxicokinetics of intravenous liposomal amphotericin B (AmBisome®) in beagle dogs. Pharm Res. 1999;16(11):1694--1701.\n\n\\[32\\] Bekersky I, Fielding RM, Dressler DE, et al. Pharmacokinetics, excretion, and mass balance of liposomal amphotericin B (AmBisome) and amphotericin B deoxycholate in humans. Antimicrob Agents Chemother. 2002;46(3):828--833.\n\n\\[33\\] Cornely OA, Leguay T, Maertens J, et al. Randomized comparison of liposomal amphotericin B versus placebo to prevent invasive mycoses in acute lymphoblastic leukaemia. J Antimicrob Chemother. 2017;72(8):2359--2367.\n\n\\[34\\] Valiante S, Elshaboury RH, Wu T, et al. 845. Clinical Outcomes in Patients Treated with High vs. Standard Dose Liposomal Amphotericin B for Invasive Mucormycosis. Open Forum Infect Dis. 2023;10(Supplement_2).\n\n\\[35\\] Stover KR, Jordan TE, Wagner JL, et al. High-dose amphotericin: yay or nay? A case series and literature review. Drugs in Context. 2024;13:1--9.\n\n\\[36\\] Elitzur S, Fischer S, Arad-Cohen N, et al. Disseminated Mucormycosis in Immunocompromised Children: Are New Antifungal Agents Making a Difference? A Multicenter Retrospective Study. Journal of Fungi. 2021;7(3):165.\n\n\\[37\\] Risum M, Helweg-Larsen J, Petersen SL, et al. Introduction of a Comprehensive Diagnostic and Interdisciplinary Management Approach in Haematological Patients with Mucormycosis: A Pre and Post-Intervention Analysis. Journal of Fungi. 2020;6(4):268.\n\n\\[38\\] Jarvis JN, Lawrence DS, Meya DB, et al. Single-Dose Liposomal Amphotericin B Treatment for Cryptococcal Meningitis. N Engl J Med. 2022;386(12):1109--1120.\n\n\\[39\\] Stott KE, Tembo D, Kajanga C, et al. Relative contribution of pharmacokinetics and immune signatures to clinical outcomes in patients with HIV-associated cryptococcal meningitis. Open Forum Infectious Dis. 2025;0.\n\n\\[40\\] Kyvernitakis A, Torres HA, Jiang Y, et al. Initial use of combination treatment does not impact survival of 106 patients with haematologic malignancies and mucormycosis: a propensity score analysis. Clin Microbiol Infect. 2016;22(9):811-811.e8.\n\n\\[41\\] Soliman SSM, Baldin C, Gu Y, et al. Mucoricin is a ricin-like toxin that is critical for the pathogenesis of mucormycosis. Nat Microbiol. 2021;6(3):313--326.\n\n\\[42\\] Wurster S, Albert ND, Bharadwaj U, et al. Blockade of the PD-1/PD-L1 Immune Checkpoint Pathway Improves Infection Outcomes and Enhances Fungicidal Host Defense in a Murine Model of Invasive Pulmonary Mucormycosis. Front Immunol. 2022;13:838344.\n\n\\[43\\] Kumaresan PR, Manuri PR, Albert ND, et al. Bioengineering T cells to target carbohydrate to treat opportunistic fungal infection. Proc Natl Acad Sci USA. 2014;111(29):10660--10665.\n\n\\[44\\] Boulware DR, Atukunda M, Kagimu E, et al. Oral Lipid Nanocrystal Amphotericin B for Cryptococcal Meningitis: A Randomized Clinical Trial. Clin Infect Dis. 2023;77(12):1659--1667.\n\n\\[45\\] Kontoyiannis DP, Andersson BS, Lewis RE, et al. Progressive disseminated aspergillosis in a bone marrow transplant recipient: response with a high-dose lipid formulation of amphotericin B. Clin Infect Dis. 2001;32(5):E94-6."
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 2 tool calls this turn (soft limit: ~3)</MEMO>\n\nExcellent — I have the full paper content. Now let me also load the citations reference to make sure I format the `.bib` file and CSL correctly for JID."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01RScecdx82VBnp1f68Pdcqe",
+                "toolName": "bash",
+                "args": {
+                  "command": "# Check if there's a JID CSL style available via the Zotero CSL repository\ncurl -s \"https://www.zotero.org/styles/journal-of-infectious-diseases\" -I | head -5\n# Also check what pandoc version is available\npandoc --version | head -2",
+                  "intent": "Check for JID CSL style availability and pandoc version"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 13004,
+                    "cache_read_input_tokens": 17292,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 13004,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 212,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 13004,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442199962,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 212,
+                    "totalTokens": 30509,
+                    "cacheReadTokens": 17292,
+                    "cacheWriteTokens": 13004,
+                    "cacheWrite5mTokens": 13004,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01RScecdx82VBnp1f68Pdcqe",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "HTTP/2 200 \r\ndate: Wed, 29 Apr 2026 05:56:47 GMT\r\ncontent-type: application/vnd.citationstyles.style+xml\r\nserver: Apache/2.4.62 (Amazon Linux)\r\naccess-control-allow-origin: *\r\npandoc 3.9\nFeatures: +server +lua"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 3 tool calls this turn (soft limit: ~3)</MEMO>\n\nThe JID CSL style is available and pandoc 3.9 is installed. Let me now download the CSL file and build the complete Quarto document and `.bib` file."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01MpzUgofvSCua5fnVG8p648",
+                "toolName": "bash",
+                "args": {
+                  "command": "curl -s \"https://www.zotero.org/styles/journal-of-infectious-diseases\" -o \"/Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\" && echo \"Downloaded successfully\" && wc -l \"/Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\"",
+                  "intent": "Download the JID CSL citation style file"
+                }
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 307,
+                    "cache_read_input_tokens": 30296,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 307,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 232,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 307,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442207668,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 232,
+                    "totalTokens": 30836,
+                    "cacheReadTokens": 30296,
+                    "cacheWriteTokens": 307,
+                    "cacheWrite5mTokens": 307,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "role": "tool",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01MpzUgofvSCua5fnVG8p648",
+                "toolName": "bash",
+                "result": {
+                  "type": "text",
+                  "value": "Downloaded successfully\n     258 /Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl"
+                }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "<MEMO>I have made 1 tool calls this turn (soft limit: ~3)</MEMO>\n\nNow let me create the `.bib` file with all 45 references, then the Quarto document."
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 1,
+                    "cache_creation_input_tokens": 275,
+                    "cache_read_input_tokens": 30603,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 275,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 4096,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 275,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442213822,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 1,
+                    "outputTokens": 4096,
+                    "totalTokens": 34975,
+                    "cacheReadTokens": 30603,
+                    "cacheWriteTokens": 275,
+                    "cacheWrite5mTokens": 275,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "assistant",
+          "content": [
+            "\n\n<div><tool-call id=\"toolu_01VTjTfYzXQsHcaPsJ3cm36L\"><script type=\"application/json\">{\"version\":1,\"name\":\"ls\",\"input\":{\"path\":\"/Users/russelllewis/Desktop/HD_JID\",\"show_details\":true},\"caption\":\"/Users/russelllewis/Desktop/HD_JID\"}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01VTjTfYzXQsHcaPsJ3cm36L\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"        Apr 29 07:55 .git/\\n 526.0K Apr 28 18:06 HD L-AMB for MCM review-REL and DPK-2-2026...[truncated, total 228 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"        Apr 29 07:55 .git/\\n 526.0K Apr 28 18:06 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.docx\\n 586.6K Apr 29 06:52 HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.pdf\\n 117.2K Apr 29 06:52 HD_reviewers comments.pdf\"},\"elapsedMs\":1}</script></tool-result></div>\n\n\n\nGot it. Let me extract the full text from the `.docx` using pandoc.\n\n<div><tool-call id=\"toolu_01AXZnZtCZRehKVZSSimCgjf\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && pandoc \\\"HD L-AMB for MCM review-REL and DPK-2-2...[truncated, total 137 chars]\",\"intent\":\"Extract full markdown content from the docx file\"},\"intent\":\"Extract full markdown content from the docx file\",\"inputPreview\":{\"type\":\"code\",\"value\":\"cd \\\"/Users/russelllewis/Desktop/HD_JID\\\" && pandoc \\\"HD L-AMB for MCM review-REL and DPK-2-2026 (002)_AP.docx\\\" -t markdown --wrap=none 2>&1\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01AXZnZtCZRehKVZSSimCgjf\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"**Does the Evidence Support High-Dose Liposomal Amphotericin B in the Treatment of Mucormy...[truncated, total 49018 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"**Does the Evidence Support High-Dose Liposomal Amphotericin B in the Treatment of Mucormycosis?**\\n\\nRussell E. Lewis, PharmD^1^ and Dimitrios P. Kontoyiannis, MD, ScD2^\\\\#^\\n\\n1 Department of Molecular Medicine, University of Padua, Padua Italy\\n\\n^2^ Department of Infectious Diseases, Infection Control, and Employee Health, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA\\n\\n**\\\\# Corresponding author**\\n\\nDimitrios P. Kontoyiannis, MD, ScD, Division of Internal Medicine, Department of Infectious Diseases, Infection Control and Employee Health, University of Texas MD Anderson Cancer Center, 1515 Holcombe Blvd, Unit 1460, Houston, TX 77030, USA.\\n\\nEmail:dkontoyi@mdanderson.org\\n\\n**ABSTRACT**\\n\\n**Introduction:** Current guidelines recommend liposomal amphotericin B (L-AMB) as first-line therapy for mucormycosis with a broad dosing range of 5-10 mg/kg/day, but uncertainty persists regarding whether higher doses improve outcomes given the increased nephrotoxicity and cost associated with dose escalation. Moreover, preclinical studies suggest delivery to some tissue may be enhanced with a high-dose induction followed by lower-dose maintenance strategy versus continued daily high doses.**\\\\\\nAreas covered**: We examined the preclinical evidence of concentration-dependent pharmacodynamics of AMB, animal model studies demonstrating dose-response relationships, and non-linear pharmacokinetics observed in humans, where plasma drug concentrations plateau at 10 mg/kg/day and paradoxically decline at higher doses. We summarize findings from a prospective pilot trial and recent observational studies comparing standard-dose (5-6 mg/kg/day) versus high-dose (≥6 mg/kg/day) L-AMB regimens.\\n\\n**Expert opinion:** Despite clear dose-response relationships in animal models, observational studies have failed to demonstrate a clear survival benefit with doses \\\\> 5-6 mg/kg/day at increased risk of nephrotoxicity. Clinicians should prioritize standard dosing, considering escalation for specific scenarios where higher doses may be more important (e.g., CNS involvement, infection with *Cunninghamella bertholletiae*). Future research should focus on identifying patient subgroups with suboptimal L-AMB exposure, novel combination regimens, rather than empiric L-AMB dose escalation. Early diagnosis, surgical debridement and immune recovery appear to be more important for survival than L-AMB dosing intensity.\\n\\n**Keywords:** Liposomal amphotericin B; mucormycosis; high-dose; pharmacokinetics; nephrotoxicity; antifungal therapy; invasive fungal infection; dose optimization.\\n\\n**Article highlights:**\\n\\n- Despite clear dose-response relationships in animal models, observational studies and the Ambizygo pilot trial show no survival advantage with L-AMB doses exceeding 5-6 mg/kg/day, while nephrotoxicity (creatinine doubling in \\\\~40% of patients) increases significantly with dose escalation.\\n\\n- Plasma AUC and Cmax plateau at 10 mg/kg/day and paradoxically decline at higher doses, suggesting saturable distribution pathways---meaning higher doses may not deliver more biologically active drug to target tissues like lungs, sinuses, or brain.\\n\\n- Characterizing L-AMB pharmacokinetic-pharmacodynamic relationships in mucormycosis is challenging because tissue-specific liposomal uptake and drug release kinetics---both influenced by local infectious burden and microenvironmental factors---determine microbiologically-active tissue concentrations in ways that cannot be inferred from serum measurements.\\n\\n- Clinicians should use L-AMB 5-6 mg/kg/day as the initial dose for most patients, reserving escalation only for specific scenarios (CNS or bone involvement, suspected suboptimal exposure) where close renal monitoring is feasible.\\n\\n- Prospective PK studies with tissue sampling, identification of patient subgroups with suboptimal exposure, and evaluation of novel combination regimens or induction-maintenance strategies warrant further investigation rather than empiric dose escalation.\\n\\n- Research should move toward exposure-guided dosing strategies, novel combinations (isavuconazole, ibrexafungerp, manogepix), and host-directed therapies rather than simple dose-response paradigms.\\n\\n**1. Introduction**\\n\\nInvasive mucormycosis, caused primarily by *Rhizopus, Mucor*, and *Lichtheimia* species of the order Mucorales, is a life-threatening fungal infection that has increased in incidence over the past two decades, predominantly affecting immunocompromised patients with hematologic malignancies, solid organ or hematopoietic cell transplantation, and poorly controlled diabetes mellitus \\\\[1\\\\]. Characterized by aggressive angioinvasion and tissue necrosis, mucormycosis carries mortality rates of 40-80% depending on infection site, diagnostic and treatment delays, feasibility of surgical debridement, and host immune recovery \\\\[2,3\\\\]. Current guidelines recommend initial therapy with intravenous liposomal amphotericin B (L-AMB) until clinical stabilization, followed by step-down to posaconazole or isavuconazole \\\\[4,5\\\\].\\n\\nDue to the aggressiveness of the infection, higher L-AMB doses (\\\\>5-6 mg/kg/day) are frequently recommended during the acute treatment phase of infection to rapidly load infected tissue to limit fungal invasion and dissemination \\\\[6\\\\]. While experimental animal models demonstrate a clear dose-response relationship for L-AMB \\\\[7\\\\], prospective trials and observational studies \\\\[8--10\\\\] have not shown improved outcomes with higher L-AMB dosing. Yet current guidelines for management of mucormycosis recommend a broad initial dosing range for liposomal amphotericin B of 5-10 mg/kg/day with avoidance of slow de-escalation of the dose \\\\[5\\\\].\\n\\nUncertainty regarding the optimal dosing of L-AMB is clinically important as higher doses often carry increased risks of nephrotoxicity and higher drug costs \\\\[3\\\\]. In this review, we critically evaluate the pharmacokinetic, preclinical, and clinical evidence supporting dose escalation, examine patient-specific factors that may influence the benefit-risk ratio of high-dose L-AMB therapy for mucormycosis, and provide practical recommendations for individualizing dosing of this essential antifungal medication. For the purposes of this review, we define \\\"standard-dose\\\" L-AMB as 5-6 mg/kg/day (the minimum recommended dose in current guidelines and listed in package labeling) and \\\"high-dose\\\" as \\\\>6 mg/kg/day. Where specific studies used different thresholds (e.g., ≥7 mg/kg/day or 10 mg/kg/day), we explicitly state the threshold used in that study.\\n\\n**2. Methods**\\n\\nThis narrative review synthesizes evidence from PubMed/MEDLINE searches using terms including \\\\'liposomal amphotericin B,\\\\' \\\\'mucormycosis,\\\\' \\\\'dose,\\\\' \\\\'pharmacokinetics,\\\\' and \\\\'pharmacodynamics,\\\\' supplemented by reference mining and expert knowledge of the field. We prioritized: (1) prospective clinical trials; (2) large retrospective cohorts with multivariate adjustment; (3) pharmacokinetic/pharmacodynamic studies in humans; and (4) animal model studies directly comparing L-AMB dose-response relationships. This is a narrative rather than systematic review; therefore, study selection was not protocol-driven but aimed to provide comprehensive coverage of the relevant evidence base.\\n\\n**3. Pharmacodynamics of liposomal amphotericin B**\\n\\nAmphotericin B (AMB) is a polyene macrolide antifungal agent with broad-spectrum activity against most clinically relevant fungi. Its amphiphilic structure renders it insoluble in body fluids at a neutral pH. The primary mechanism of antifungal action has long thought to involve binding to ergosterol in fungal cell membranes, forming transmembrane channels that disrupt membrane integrity and cause lethal ion leakage, particularly of potassium. However, more recent studies using solid-state NMR suggest amphotericin B forms extramembrane aggregates or \\\"sponges\\\" that extract ergosterol from the fungal cell wall \\\\[11,12\\\\]. When incorporated into a liposome, the polyene remains inside the liposome carrier until drug is released when the intact liposome encounters ergosterol in the fungal cell membrane \\\\[13\\\\].\\n\\nCompared to conventional amphotericin-B deoxycholate formulations, clinical use of L-AMB is associated with fewer delayed (2-6 hour) infusion-related reactions mediated by proinflammatory cytokines (e.g., Interleukin (IL-1ß, IL-6, IL-8) and prostaglandin E2 release. However, an immediate unique type-1 hypersensitivity reaction termed \\\"complement activation-related pseudo allergy\\\" (CARPA) can develop within minutes of L-AMB infusion characterized by a triad of symptoms including: (1) chest pain, dyspnea, hypoxia; (2) abdominal, flank, or leg pain; and (3) flushing and urticaria \\\\[14\\\\]. Amphotericin B-associated nephrotoxicity, which arises through constriction of renal arterioles and damage to the distal tubular membranes, results in loss of potassium, magnesium, and bicarbonate that can progress renal tubular acidosis and decreased glomerular filtration. The onset is delayed with the liposomal formulation due to the preferential distribution of the drug to organs rich in reticuloendothelial cells and lack of glomerular filtration of the liposome carrier \\\\[15\\\\].\\n\\nPatients receiving liposomal amphotericin B (L-AMB) require daily monitoring of serum creatinine, potassium, and magnesium. Dose reduction or extended dosing intervals should be considered if creatinine rises to more than twice baseline or exceeds 2.0 mg/dL. Kidney protection strategies include avoiding other nephrotoxic drugs (aminoglycosides, calcineurin inhibitors, contrast agents) and administering intravenous saline before infusions, although the volume must often be titrated to patient's cardiovascular function. Importantly, the acceptable threshold for kidney injury depends on disease severity: in life-threatening infections such as mucormycosis, maintaining adequate antifungal exposure may take priority over kidney protection, whereas more conservative approaches are reasonable in less severe cases or when effective alternative agents are available.\\n\\nAmphotericin B exhibits concentration-dependent killing and prolonged post-antifungal effects in yeast and molds, with antifungal activity linked to the C~max~/MIC and AUC~0-24~/MIC of the dosing regimen- thus supporting the concept that higher, infrequently administered dosing regimens will exhibit better antifungal efficacy \\\\[16--18\\\\]. In neutropenic and rabbit models of aspergillosis, near-maximal antifungal efficacy is observed when the total serum amphotericin B concentrations C~max~/MIC surpasses 2.5 or and AUC~0-24~/MIC of 13.6 \\\\[19\\\\]. However, encapsulation of amphotericin B in the unilamellar liposomes changes the pharmacokinetics and pharmacodynamics of the drug, reducing drug interactions with mammalian cell membranes while enhancing tissue distribution and reducing toxicity compared with conventional amphotericin B deoxycholate \\\\[20\\\\]. Hence, the relationship between serum drug concentrations, which contain both non-biologically active drug encased inside liposomes and free drug versus microbiologically-active tissue concentrations is variable and dependent on tissue-specific liposomal uptake, drug release kinetics, and local microenvironmental factors \\\\[20\\\\].\\n\\nFew studies have explored the pharmacodynamics of escalating L-AMB doses in animal models of mucormycosis. Using a neutropenic mouse model of pulmonary mucormycosis, Lewis et al. \\\\[7\\\\] reported improved clearance of *Rhizopus oryzae* lung fungal burden as daily intravenous doses of L-AMB increased from 5 mg/kg to 10 mg/kg daily. Fungal clearance correlated with lung tissue homogenate concentrations of AMB surpassing the mean fungicidal concentration (MFC) of the R. oryzae isolate (8 mg/L) inoculated in animals. Interestingly, total lung concentrations of amphotericin B decreased after 72 hours as fungal burden declined despite sustained 10 mg/kg/day dosing, suggesting possible saturation of drug accumulation in the lung or decreased distribution of the liposomes to the lung with fungal clearance.\\n\\nSimilar animal studies have explored initial dosage escalation (10 mg/kg/day x 72 hours) followed by de-escalation to 3 mg/kg/day daily doses to treat \\\\\\\"resistant\\\\\\\" pathogens such as *Aspergillus terreus*. Lewis et al found that a 10 mg/kg /day x 72 hours induction-deescalation strategy resulted in greater reduction in lung fungal burden versus daily L-AMB doses of 10-20 mg/kg/day \\\\[21\\\\]. Interestingly, total amphotericin B lung tissue homogenate concentrations were higher at Day+7 of infection in the 10 → 3 mg/kg/day dosing group versus animals that received 10 mg/kg/day sustained dosing. A possible explanation relates to L-AMB\\\\'s multicompartmental pharmacokinetics and tissue distribution patterns. Initial high doses rapidly saturate the reticuloendothelial system (liver, spleen), allowing subsequent doses to distribute more proportionally to other tissues including the lung. With continued high-dose administration, ongoing RES uptake may \\\"compete\\\" with lung distribution \\\\[20\\\\]. Additionally, lower maintenance doses after initial loading may result in less rapid redistribution from tissues back to plasma for elimination. This finding supports the biological plausibility of induction-maintenance dosing strategies, though clinical validation remains lacking. In their review of animal model studies, Adler-Moore and colleagues described clear patterns of non-linear tissue uptake of L-AMB or/or differential saturated uptake with higher dosing \\\\[15\\\\].\\n\\nStudies using diabetic ketoacidosis and pulmonary mucormycosis infection models by Ibrahim\\\\'s research group at UCLA \\\\[22--27\\\\] and Takemoto et al. \\\\[28\\\\] have confirmed that L-AMB doses ≥10 mg/kg/day achieve superior tissue fungal clearance compared to lower doses, particularly in the central nervous system. In a review of L-AMB tissue penetration data from animal models, Adler-Moore et al. noted that accumulation of L-AMB in tissue increases in a dose-dependent manner \\\\[15\\\\]. However, the dose-response relationship varied by organ, exhibiting linear kinetics in some tissues and non-linear kinetics in others, influenced by both animal species and infection status. The liver and spleen consistently showed the highest drug retention across all animal infection models.\\n\\nSeveral important limitations must be considered when extrapolating preclinical dose-response findings to clinical practice. Murine models of mucormycosis typically employ standardized immunosuppression regimens (neutropenia or diabetic ketoacidosis) that do not fully reflect the heterogeneous immune states encountered in patients with hematologic malignancies, solid organ transplantation, or uncontrolled diabetes. Furthermore, antifungal therapy in animal models is generally initiated shortly after experimental infection, whereas clinical diagnosis of mucormycosis is frequently delayed, potentially altering the relationship between drug exposure and therapeutic response. Finally, patient-specific factors affecting L-AMB distribution and elimination, including obesity, critical illness, fluid overload, and concurrent nephrotoxic medications---are not captured in preclinical models, limiting the direct applicability of animal-derived pharmacodynamic targets to individualized dosing decisions.\\n\\n**4. Should L-AMB dosing in mucormycosis be genus or species specific?**\\n\\nThe concept of using higher antifungal doses to treat yeast and some resistant *Aspergillus* spp. is generally accepted for triazole antifungals but not established for L-AMB even for these more common fungal infections. Frequently clinicians must empirically initiate L-AMB therapy for suspected mucormycosis based on rapidly progressing clinical or radiographic signs - e.g., breakthrough sinusitis on *Aspergillus*-active antifungal therapy, hard palate or nasal bridge necrosis, reverse halo sign on computed tomography- before an infecting isolate is recovered and identified to the species level. No studies have demonstrated the utility of *in vitro* susceptibility testing for guiding amphotericin B dosing \\\\[5\\\\]*. In vitro* susceptibility testing reveals modest MIC differences among Mucorales genera, with *Rhizopus* and *Mucor* species demonstrating similar susceptibility profiles, while *Cunninghamella* and *Lichtheimia* species tend to exhibit higher MICs \\\\[29\\\\]. As discussed previously, animal model studies consistently demonstrate equivalent efficacy of L-AMB at 10-15 mg/kg against both *Rhizopus* and *Mucor* species, with no differential dosing required to achieve comparable survival and tissue burden reductions. *Cunninghamella bertholletiae* may be an exception, demonstrating reduced in vitro susceptibility to AMB (geometric mean MIC 2 µg/mL vs. \\\\< 1 2 µg/mL for *Rhizopus, Lichtheimia and Mucor* ) higher clinical mortality despite standard therapy in several case series \\\\[29\\\\]. However, clinical outcome data stratified by species remain limited, and no studies have tested whether dose escalation improves outcomes for less susceptible species. Notably, the large Japanese nationwide analysis of 82 patients found that species of Mucorales had no detectable effect on survival; instead, prolonged neutropenia and persistent hyperglycemia were the factors most strongly associated with clinical outcome \\\\[10\\\\]. While species identification may inform prognosis, current data are insufficient to recommend species-specific dosing adjustments. For CNS involvement, higher doses may be warranted due to limited blood-brain barrier penetration rather than species-specific considerations. We acknowledge this as an important area for future research, particularly prospective studies correlating species-level MIC data with clinical outcomes and drug exposure.\\n\\n**5. Human pharmacokinetics**\\n\\nFollowing intravenous administration, liposomal amphotericin B (L-AMB) maintains its physicochemical integrity circulating in the bloodstream over extended periods, resulting in prolonged residence time within the central compartment (Figure 1). The drug is then taken up primarily by organs rich in reticuloendothelial cells (i.e. liver, spleen) and then redistributes to other body compartments including the lung, kidney and central nervous system.\\n\\nThe drug exhibits non-linear pharmacokinetics with substantial interpatient pharmacokinetic variability across therapeutic doses. At doses of 1.0, 2.5, 5.0, and 7.5 mg/kg, first-day mean AUCs increased disproportionally (32, 71, 294, and 534 µg·h/mL, respectively) . Concurrently, mean plasma clearance declined at higher doses, decreasing from 39-51 mL/h/kg at 1.0-2.5 mg/kg/day to 21-25 mL/h/kg at 5.0-7.5 mg/kg/day \\\\[30\\\\]. There are relatively few data describing how the distribution of L-AMB changes over time- i.e. whether saturation in tissue update alters the distribution of the drug \\\\[20\\\\].\\n\\nThe non-linear behavior of L-AMB pharmacokinetic becomes more pronounced with further dose escalation. A subsequent Phase I/II trial evaluating 10, 12.5, and 15 mg/kg/day L-AMB in patients with invasive mold infections reported mean AUC and Cmax values plateaued at 10 mg/kg/day and paradoxically declined at doses of 12.5 and 15 mg/kg/day, indicating saturable distribution or elimination pathways \\\\[30\\\\]. Therefore, it is unclear whether L-AMB daily dosages exceeding 10 mg/kg distribute more drug to target organs such as the lung, sinuses or brain, which are the most frequent sites of infection in invasive mucormycosis. Finally, human PK studies showed that, compared to AMB-deochycolate, liposomal AMB increases total AMB concentrations while decreasing unbound AMB concentrations in plasma as a result of sequestration of the drug in long-circulating liposomes \\\\[31,32\\\\] however the clinical significance of this is uncertain**.** Table 1 provides an overview of the pharmacokinetic and pharmacodynamic properties of liposomal AMB**.**\\n\\nEstablishing meaningful pharmacokinetic-pharmacodynamic relationships for liposomal amphotericin B (L-AMB) is complicated by several factors. Routine assays measure total plasma amphotericin B concentrations, yet the pharmacologically active fraction is the free (unbound) drug; amphotericin B exhibits complex protein binding that includes association with lipoproteins, making free concentrations difficult to determine reliably. More fundamentally, the relationship between plasma and tissue exposure is problematic for L-AMB due to preferential uptake by the reticuloendothelial system (liver, spleen, bone marrow), meaning that higher plasma concentrations do not necessarily translate to proportionally higher concentrations at infected tissue sites---particularly those outside the reticuloendothelial system such as lung, brain, or sinus tissue. These factors collectively limit the utility of plasma drug monitoring and help explain why clear concentration-response relationships have been difficult to establish for L-AMB in clinical studies.\\n\\n**6. Clinical studies**\\n\\nSeveral observational studies and one prospective pilot study evaluated clinical outcomes following administration of HD L-AMB (Table 2). The most informative trial to date was a pilot study lead by Lanternier et al. (Ambizygo trial), which prospectively evaluated high-dose liposomal amphotericin B (10 mg/kg/day) for 4 weeks in 33 patients with mucormycosis, with 71% undergoing surgical debridement \\\\[8\\\\]. The overall response rate was 36% at week 4 and 45% at week 12, with mortality rates of 38% and 53% at weeks 12 and 24, respectively. Creatinine doubling occurred in 40% of patients, though renal dysfunction was reversible in 63% within 3 months. This study demonstrated that high-dose L-AMB combined with surgery achieved response rates comparable to other first-line therapies, despite increased but manageable nephrotoxicity. Risk for nephrotoxicity could be influenced by the underlying host as it was more common in patients with diabetes mellitus. Toxicity can be host dependent, seen more commonly in the diabetes subgroup \\\\[8\\\\]. It is unclear of nephrotoxicity is seen at an earlier point after the initiation of high-dose L AMB compared to patients who receive regular doses of L-AMB.\\n\\nAlthough not specific for mucormycosis, the AmBiLoad trial was a randomized, double-blind study of 201 patients with invasive mold infections (97% aspergillosis) comparing liposomal amphotericin B at 3 mg/kg/day versus 10 mg/kg/day for 14 days followed by 3 mg/kg/day \\\\[33\\\\]. No significant differences in favorable response (50% vs 46%) or 12-week survival (72% vs 59%) were observed between standard and high-dose groups, while nephrotoxicity (14% vs 31%, P\\\\<0.01) and grade 3 hypokalemia (16% vs 30%, P=0.015) were significantly higher in the high-dose group. The trial established that 3 mg/kg/day liposomal amphotericin B is effective for invasive aspergillosis with no additional benefit from dose escalation to 10 mg/kg/day.\\n\\nRetrospective observational studies of invasive mucormycosis have failed to identify a signal of improved outcomes for patients treated with higher versus standard doses of L-AMB (Table 2) \\\\[3,10,34--37\\\\] However, interpretation of patient outcomes is confounded by unstandardized diagnosis, frequent use or combination therapy and surgical resection, and differences in host immunosuppression and underlying disease status.\\n\\n**7. Scenarios where dosage escalation may still be considered**\\n\\nWhile the available evidence does not support routine dose escalation of liposomal amphotericin B, certain clinical scenarios may warrant consideration of higher doses on an individualized basis. These include: CNS involvement, bone or osteoarticular infections where adequate tissue penetration is uncertain; progressive disease despite standard dosing when surgical debridement is not feasible; and patients infected with *Cunninghamella.* It should be emphasized that these considerations represent expert opinion in the absence of controlled data, and the decision to escalate dosing must weigh potential benefits against increased nephrotoxicity risk in each individual patient.\\n\\n**8. Conclusions**\\n\\nCollectively, there remains little evidence that higher-dose (\\\\>5-6 mg/kg/day) L-AMB improves outcomes for mucormycosis. While preclinical models demonstrate broad dose-dependent efficacy, observational retrospective studies and the pilot AmBizygo pilot trial have failed to demonstrate improved survival with dose escalation beyond 5 mg/kg/day, despite increased nephrotoxicity risks. Several key knowledge gaps must be addressed to optimize L-AMB dosing strategies for this devastating infection.\\n\\nFirst, the non-linear pharmacokinetics and apparent plateau in tissue distribution at doses exceeding 10 mg/kg/day warrant further investigation through prospective pharmacokinetic studies with tissue sampling. Understanding whether higher doses deliver more biologically active amphotericin B to target sites such as lungs, sinuses, and brain, the most common sites of mucormycosis---is critical. Pharmacokinetic studies have also not explored more chronic phases of the infection, when tissue uptake of L-AMB may be saturated versus acute phases of the infection. Studies measuring free (non-liposome encapsulated) amphotericin B concentrations in infected tissues, rather than total drug concentrations, would provide more relevant pharmacodynamic targets. Moreover, identifying patient subgroups who achieve suboptimal drug exposure at standard doses---potentially due to high body weight, critical illness, or extracorporeal membrane oxygenation---may reveal populations who could benefit from dose escalation or shorter \\\"induction\\\" phases of high-dose treatment.\\n\\nThird, prospective randomized controlled trials comparing standard (5 mg/kg/day) versus high-dose (10 mg/kg/day) L-AMB remains the gold standard for establishing optimal dosing but face significant feasibility challenges given the rarity and heterogeneity of mucormycosis. Collaborative international registry studies with standardized treatment protocols and detailed pharmacokinetic sampling could provide valuable real-world evidence. Ideally, such studies should stratify patients by infection site (particularly CNS involvement, where higher doses are commonly recommended), underlying immunosuppression, and timing of surgical debridement to identify patient-specific factors that modify the dose-response relationship. Notably recent studies have shown that infrequent high-dosages of L-AMB (10 mg/kg once weekly) are as effective in the treatment of cryptococcal meningoencephalitis \\\\[38\\\\], but the evidence supporting the efficacy of these regimens was based on a pharmacodynamic (early fungicidal activity in the cerebral spinal fluid) rather than pharmacokinetic endpoints \\\\[39\\\\]. Therefore, it is unclear whether similar dosing strategies can be adopted for the treatment mucormycosis without similar pharmacodynamic biomarkers.\\n\\nFourth, the observational studies reviewed demonstrate that surgical debridement is more strongly associated with survival than antifungal dosing regimen- although confounding by indication bias may overestimate the benefits of surgery in this analysis. Future research should focus on integrated treatment strategies that optimize the synergy between surgical source control and antifungal therapy. Studies examining whether escalation specifically benefits patients with unresectable disease or delayed surgical intervention would address a clinically relevant question.\\n\\nFifth, novel amphotericin B formulations or combination regimens may overcome the limitations of current L-AMB dosing. Although recent observational studies have not found a major benefit for combinations of L-AMB with echinocandins or triazoles in mucormycosis \\\\[40\\\\] , animal models have demonstrated improved survival and fungal clearance when L-AMB is combined with isavuconazole \\\\[24\\\\] , the glucan synthesis inhibitor ibrexafungerp \\\\[25\\\\] , and the (GPI)-anchor biosynthesis pathway inhibitor manogepix \\\\[26\\\\]. Additionally, host-directed therapies that block fungal invasion through CotH proteins or neutralize mycotoxins \\\\[41\\\\] should be explored as adjuncts to standard-dose antifungal therapy. Novel Immunotherapeutic approaches including checkpoint inhibitor therapy \\\\[42\\\\] or chimeric antigen T- cell approaches could be effective \\\"living antifungals\\\" \\\\[43\\\\] after initial treatment with L-AMB. Finally, economic analyses comparing the costs of high-dose L-AMB therapy (including management of nephrotoxicity and potential renal replacement therapy) against marginal clinical benefits are needed to inform rational resource allocation, particularly in resource-limited settings where mucormycosis incidence may be highest. The development of novel oral formulation of AMB with potentially less nephrotoxicity will open the door to potential \\\"step down\\\" therapy with polyenes \\\\[44\\\\] .\\n\\nBased on current evidence, clinicians should consider 5-6 mg/kg/day as an appropriate initial L-AMB dose for most patients with mucormycosis, with dose escalation reserved for selected situations where compelling clinical rationale exists (such as CNS or bone involvement \\\\[45\\\\] or suspected suboptimal drug exposure) and close monitoring of renal function is feasible. Treatment decisions should prioritize early diagnosis, prompt surgical debridement when feasible, and reversal of underlying immunosuppression over empiric dose escalation. Future research must move beyond simple dose-response paradigms to embrace personalized, exposure-guided dosing strategies informed by robust pharmacokinetic-pharmacodynamic relationships and patient-specific risk factors.\\n\\n**Plain language summary:**\\n\\nMucormycosis is a rare but deadly fungal infection primarily affecting immunocompromised patients that is treated with surgery and an antifungal medication called liposomal amphotericin B, with ongoing debate about whether higher drug doses improve survival despite increased kidney damage risks. While laboratory studies in mice demonstrated that higher doses killed more fungus in infected tissues, multiple recent clinical studies in humans found no survival difference between patients receiving standard doses (5 mg/kg/day) versus higher doses (6-15 mg/kg/day), and the drug's complex behavior in the body means extra doses may not actually reach infected tissues effectively. Based on current evidence, doctors should use standard doses for most patients and focus instead on rapid diagnosis, surgical removal of infected tissue, and helping patients' immune systems recover, as these factors are more strongly associated with survival than higher antifungal doses.\\n\\n**Author contribution statement:** Russell E. Lewis: Literature review, Writing - original draft, Writing - review & editing. Dimitrios P. Kontoyiannis: Conceptualization, Writing - review & editing.\\n\\n**Funding statement:** No funding was received for the article\\n\\n**Disclosures:** D.P.K. reports research support from Basilea and Astellas Pharma. He also received consultant fees from Basilea, Inc, Knight, Inc, Biosegren, Inc, Pulmocide Inc, Avir Pharma, Inc and is a member of the Data Review Committee for MundiPharma Therapeutics, the (MSG-ERC). He also serves as the president of Mycoses Study Group Research Consortium. \\n\\n**DPK** acknowledges the Robert C Hickey endowment\\n\\n**Table 1: Pharmacokinetic and pharmacodynamic properties of liposomal amphotericin B**. Data are from references \\\\[20,30--32\\\\]\\n\\n  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n  **Characteristic**                           **Liposomal Amphotericin B**\\n  -------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n  Formulation                                  Small (60-80 nm) unilamellar liposomes consisting of distearoyl phosphatidylglycerol, cholesterol, and hydrogenated soy phosphatidylcholine; in a 2:1:0.8 molar ratio and AmB in a 9:1 lipid:drug molar ratio\\n\\n  Pharmacodynamics                             Cmax/MIC, AUC/MIC\\n\\n  Free (non-liposomal bound drug) in plasmaa   \\\\<25 ng/mL\\n\\n  Mean Cmax mg/Lb                              58\\n\\n  Mean AUC0-24h mg/Lxhb                        713\\n\\n  Mean CLt L/h/kgb                             0.017\\n\\n  Dose linearityc                              Up to 10 mg/kg/day in adults\\n\\n  Metabolism                                   Not metabolized\\n\\n  Elimination                                  Unchanged feces and urine (\\\\< 10% over one week)\\n\\n  Dosage adjustment in renal impairment        No adjustment for accumulation concerns\\n\\n  Dosage adjustment in hepatic impairment      No adjustment for accumulation concerns\\n  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n\\n**Table 2: Clinical studies evaluating high-dose liposomal amphotericin B for mucormycosis^a^**\\n\\n  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n  Author- year                     Study design                                                                                        L-AMB treatment regimen                                                                      Outcomes\\n  -------------------------------- --------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n  Lanternier et al. 2015 \\\\[8\\\\]     Prospective, multicenter pilot study; n=40 patients; most hematologic malignancy, 33% neutropenic   10 mg/kg/day for median of 13.5 days (range 0-28)                                            Response rate (n=33 patients at week 4) 38% overall mortality at week 12 and 53% at week 24 SeCr doubling in 40% of patients\\n\\n  Valiante et al al. 2023 \\\\[34\\\\]   Retrospective cohort study; (n=67 adults with probable/proven mucormycosis                          L-AMB \\\\< 6 mg/kg/day vs. ≥ 6 mg/kg/day                                                       12-week mortality rate 49 vs. 50%. Similar rates of acute kidney injury (47% v.s 50%)\\n\\n  Tashiro et al. 2023 \\\\[10\\\\]       Retrospective multicenter nationwide cohort analysis n=82 cases                                     L-AMB 5 mg/kg/day vs. ≥ 5 mg/kg/day                                                          No difference in survival between patients receiving liposomal amphotericin B at 5 mg/kg/d relative to those receiving \\\\>5 mg/kg/d (P = .625). In analysis adjusting for confounders, the hazard ratio for the influence of \\\\>5 mg/kg/d liposomal amphotericin B on 4-week survival was 0.86 (95% CI, 0.28--2.68; P = .796) compared with 5 mg/kg/d.\\n\\n  Stover et al. 2024 \\\\[35\\\\]        Single-center case series, mixed population                                                         L-AMB mean 8.9 mg/kg/day for 11 days                                                         Response rate 33% one-third of patients developed doubling baseline serum creatine\\n\\n  Jeong et al. 2019 \\\\[3\\\\]          Systematic review of 851 published cases, mixed population                                          n=57 received high-dose L-AMB (6--15 mg/kg/day)                                              Patients receiving L-AmB doses at \\\\> 5 mg/kg/day experienced higher 90-day mortality, although not statistically significant \\\\[22/57 (38.6%) vs. 29/93 (31.2%); P = 0.352\\\\]. In addition, renal toxicity was more common following administration of higher-dose i.v. L-AmB \\\\[15/57 (26.3%) vs. 12/93 (12.9%); P = 0.038\\n\\n  Elitzuer et al 2021 \\\\[36\\\\]       Retrospective analysis of 12 pediatric cases, mixed population                                      N=5/12 (42%) received HD L-AMB during treatment only 1/5 (20%) as monotherapy                4/5 (80%) of patients survived with HD L-AMB vs. 4/5 died with standard dose of L-AMB (3/5 in combination with triazole or echinocandin)\\n\\n  Risum et al. 2020 \\\\[37\\\\]         Retrospective analysis of 13 patients with invasive mucormycosis                                    3/13 received HD L-AMB for suspected CNS involvement in combination with other antifungals   3/3 response (100%) with HD-L-AMB vs. 10/13 standard dose (77%)\\n  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\n\\n^a^ This summary table included heterogenous populations, dosing regimens and outcome measures- therefore direct comparisons across studies may not be warranted.\\n\\n![](media/image1.png){width=\\\"4.340277777777778in\\\" height=\\\"4.1305555555555555in\\\"}\\n\\n**Figure 1: Pharmacokinetic model of liposomal amphotericin B**. Following intravenous administration, liposomal amphotericin B distributes from the central compartment (1, plasma) to reticuloendothelial system organs including the liver, spleen, and bone marrow (compartment 2), and to kidney, lung and other peripheral tissues (compartment 3). Rate constants (k) indicate bidirectional transfer between compartments: *k12* and *k21* represent distribution and redistribution between plasma and reticuloendothelial organs; *k13* and *k31* between plasma and peripheral tissues; and *k23* and *k32* between reticuloendothelial organs and peripheral tissues. Drug elimination occurs from the central compartment via biliary and urinary excretion (dotted arrow). Figure adapted from Groll et al. \\\\[20\\\\]\\n\\n**REFERENCES**\\n\\n\\\\[1\\\\] Skiada A, Drogari-Apiranthitou M, Roilides E, et al. A Global Analysis of Cases of Mucormycosis Recorded in the European Confederation of Medical Mycology / International Society for Human and Animal Mycology (ECMM / ISHAM) Zygomyco.net Registry from 2009 to 2022. Mycopathologia. 2025;190(4):53.\\n\\n\\\\*\\\\* Recent update on the epidemiology of mucormycosis\\n\\n\\\\[2\\\\] Sigera LSM, Denning DW. A Systematic Review of the Therapeutic Outcome of Mucormycosis. Open Forum Infect Dis. 2023;11(1).\\n\\n\\\\[3\\\\] Jeong W, Keighley C, Wolfe R, et al. The epidemiology and clinical manifestations of mucormycosis: a systematic review and meta-analysis of case reports. Clin Microbiol Infect. 2019;25(1):26--34.\\n\\n\\\\[4\\\\] Skiada A, Lanternier F, Groll AH, et al. Diagnosis and treatment of mucormycosis in patients with hematological malignancies: guidelines from the 3rd European Conference on Infections in Leukemia (ECIL 3). Haematologica. 2013;98(4):492--504.\\n\\n\\\\[5\\\\] Cornely OA, Alastruey-Izquierdo A, Arenz D, et al. Global guideline for the diagnosis and management of mucormycosis: an initiative of the European Confederation of Medical Mycology in cooperation with the Mycoses Study Group Education and Research Consortium. Lancet Infect Dis. 2019;19(12):e405--e421.\\n\\n\\\\[6\\\\] Kontoyiannis DP, Lewis RE. How I treat mucormycosis. Blood. 2011;118(5):1216--1224.\\n\\n\\\\[7\\\\] Lewis RE, Albert N, Liao G, et al. Comparative pharmacodynamics of amphotericin B lipid complex and liposomal amphotericin B in a murine model of pulmonary mucormycosis. Antimicrobial Agents and Chemother. 2010;54(3):1298--1304.\\n\\n\\\\[8\\\\] Lanternier F, Poiree S, Elie C, et al. Prospective pilot study of high-dose (10 mg/kg/day) liposomal amphotericin B (L-AMB) for the initial treatment of mucormycosis. J Antimicrob Chemother. 2015;70(11):3116--3123.\\n\\n\\\\*\\\\* Key prospective study investing standard-dose versus high-dose L-AMB for mucormycosis\\n\\n\\\\[9\\\\] Spellberg B, Ibrahim AS, Chin-Hong PV, et al. The Deferasirox-AmBisome Therapy for Mucormycosis (DEFEAT Mucor) study: a randomized, double-blinded, placebo-controlled trial. J Antimicrob Chemother. 2012;67(3):715--722.\\n\\n\\\\[10\\\\] Tashiro M, Namie H, Ito Y, et al. Prognostic Association of Liposomal Amphotericin B Doses Above 5 mg/kg/d in Mucormycosis: A Nationwide Epidemiologic and Treatment Analysis in Japan. Open Forum Infectious Diseases. 2023;10(10).\\n\\n\\\\[11\\\\] Anderson TM, Clay MC, Cioffi AG, et al. Amphotericin forms an extramembranous and fungicidal sterol sponge. Nat Chem Biol \\\\[Internet\\\\]. 2014;10(5):400--406.\\n\\n\\\\[12\\\\] Lewandowska A, Soutar CP, Greenwood AI, et al. Fungicidal amphotericin B sponges are assemblies of staggered asymmetric homodimers encasing large void volumes. Nat Struct Mol Biol. 2021;28(12):972--981.\\n\\n\\\\[13\\\\] Walker L, Sood P, Lenardon MD, et al. The Viscoelastic Properties of the Fungal Cell Wall Allow Traffic of AmBisome as Intact Liposome Vesicles. mBio. 2018;9(1):e02383-17.\\n\\n\\\\[14\\\\] Szebeni J. Complement activation-related pseudoallergy: a new class of drug-induced acute immune toxicity. Toxicology. 2005;216(2--3):106--121.\\n\\n\\\\[15\\\\] Adler-Moore J, Lewis RE, Brüggemann RJM, et al. Preclinical Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Antifungal Activity of Liposomal Amphotericin B. Clinical Infectious Diseases. 2019;68:S244--S259.\\n\\n\\\\[16\\\\] Andes D, Safdar N, Marchillo K, et al. Pharmacokinetic-pharmacodynamic comparison of amphotericin B (AMB) and two lipid-associated AMB preparations, liposomal AMB and AMB lipid complex, in murine candidiasis models. Antimicrob Agents Chemother. 2006;50(2):674--684.\\n\\n\\\\[17\\\\] Andes D, Stamsted T, Conklin R. Pharmacodynamics of amphotericin B in a neutropenic-mouse disseminated-candidiasis model. Antimicrob Agents Chemother. 2001;45(3):922--926.\\n\\n\\\\[18\\\\] Wiederhold NP, Tam VH, Chi J, et al. Pharmacodynamic activity of amphotericin B deoxycholate is associated with peak plasma concentrations in a neutropenic murine model of invasive pulmonary aspergillosis. Antimicrob Agents and Chemother. 2006;50(2):469--473.\\n\\n\\\\[19\\\\] Al-Nakeeb Z, Petraitis V, Goodwin J, et al. Pharmacodynamics of amphotericin B deoxycholate, amphotericin B lipid complex, and liposomal amphotericin B against Aspergillus fumigatus. Antimicrob Agents Chemother. 2015;59(5):2735--2745.\\n\\n\\\\[20\\\\] Groll AH, Rijnders BJA, Walsh TJ, et al. Clinical Pharmacokinetics, Pharmacodynamics, Safety and Efficacy of Liposomal Amphotericin B. Clin Infect Dis. 2019;68(Supplement_4):S260--S274.\\n\\n\\\\[21\\\\] Lewis RE, Albert NP, Liao G, et al. High-dose induction liposomal amphotericin B followed by de-Escalation is effective in experimental Aspergillus terreus pneumonia. J of Antimicrob Chemothera. 2013;68(5):1148--1151.\\n\\n\\\\[22\\\\] Ibrahim AS, Gebremariam T, Fu Y, et al. Combination echinocandin-polyene treatment of murine mucormycosis. Antimicrob Agents Chemother. 2008;52(4):1556--1558.\\n\\n\\\\[23\\\\] Luo G, Gebremariam T, Lee H, et al. Efficacy of liposomal amphotericin B and posaconazole in intratracheal models of murine mucormycosis. Antimicrob Agents Chemother. 2013;57(7):3340--3347.\\n\\n\\\\[24\\\\] Gebremariam T, Gu Y, Singh S, et al. Combination treatment of liposomal amphotericin B and isavuconazole is synergistic in treating experimental mucormycosis. J Antimicrob Chemother. 2021;76(10):2636--2639.\\n\\n\\\\[25\\\\] Gebremariam T, Alkhazraji S, Gu Y, et al. Ibrexafungerp is efficacious in a neutropenic murine model of pulmonary mucormycosis as monotherapy and combined with liposomal amphotericin B. Antimicrob Agents Chemother. 2024;68(5):e0154523.\\n\\n\\\\[26\\\\] Gebremariam T, Gu Y, Alkhazraji S, et al. The Combination Treatment of Fosmanogepix and Liposomal Amphotericin B Is Superior to Monotherapy in Treating Experimental Invasive Mold Infections. Antimicrob Agents Chemother. 2022;66(7):e0038022.\\n\\n\\\\[27\\\\] Gu Y, Gebremariam T, Alkhazraji S, et al. Efficacy of an oral lipid nanocrystal formulation of amphotericin B (MAT2203) in the neutropenic mouse model of pulmonary mucormycosis. Antimicrob Agents Chemother. 2024;68(6):e0154023.\\n\\n\\\\[28\\\\] Takemoto K, Yamamoto Y, Kanazawa K. Comparative study of the efficacy of liposomal amphotericin B and amphotericin B deoxycholate against six species of Zygomycetes in a murine lethal infection model. J Infect Chemother. 2010;16(6):388--395.\\n\\n\\\\[29\\\\] Guinea J, Escribano P, Vena A, et al. Increasing incidence of mucormycosis in a large Spanish hospital from 2007 to 2015: Epidemiology and microbiological characterization of the isolates. PLoS ONE. 2017;12(6):e0179136.\\n\\n\\\\[30\\\\] Walsh TJ, Yeldandi V, McEvoy M, et al. Safety, tolerance, and pharmacokinetics of a small unilamellar liposomal formulation of amphotericin B (AmBisome) in neutropenic patients. Antimicrob Agents Chemother. 1998;42(9):2391--2398.\\n\\n\\\\[31\\\\] Bekersky I, Boswell GW, Hiles R, et al. Safety and toxicokinetics of intravenous liposomal amphotericin B (AmBisome®) in beagle dogs. Pharm Res. 1999;16(11):1694--1701.\\n\\n\\\\[32\\\\] Bekersky I, Fielding RM, Dressler DE, et al. Pharmacokinetics, excretion, and mass balance of liposomal amphotericin B (AmBisome) and amphotericin B deoxycholate in humans. Antimicrob Agents Chemother. 2002;46(3):828--833.\\n\\n\\\\[33\\\\] Cornely OA, Leguay T, Maertens J, et al. Randomized comparison of liposomal amphotericin B versus placebo to prevent invasive mycoses in acute lymphoblastic leukaemia. J Antimicrob Chemother. 2017;72(8):2359--2367.\\n\\n\\\\[34\\\\] Valiante S, Elshaboury RH, Wu T, et al. 845. Clinical Outcomes in Patients Treated with High vs. Standard Dose Liposomal Amphotericin B for Invasive Mucormycosis. Open Forum Infect Dis. 2023;10(Supplement_2).\\n\\n\\\\[35\\\\] Stover KR, Jordan TE, Wagner JL, et al. High-dose amphotericin: yay or nay? A case series and literature review. Drugs in Context. 2024;13:1--9.\\n\\n\\\\[36\\\\] Elitzur S, Fischer S, Arad-Cohen N, et al. Disseminated Mucormycosis in Immunocompromised Children: Are New Antifungal Agents Making a Difference? A Multicenter Retrospective Study. Journal of Fungi. 2021;7(3):165.\\n\\n\\\\[37\\\\] Risum M, Helweg-Larsen J, Petersen SL, et al. Introduction of a Comprehensive Diagnostic and Interdisciplinary Management Approach in Haematological Patients with Mucormycosis: A Pre and Post-Intervention Analysis. Journal of Fungi. 2020;6(4):268.\\n\\n\\\\[38\\\\] Jarvis JN, Lawrence DS, Meya DB, et al. Single-Dose Liposomal Amphotericin B Treatment for Cryptococcal Meningitis. N Engl J Med. 2022;386(12):1109--1120.\\n\\n\\\\[39\\\\] Stott KE, Tembo D, Kajanga C, et al. Relative contribution of pharmacokinetics and immune signatures to clinical outcomes in patients with HIV-associated cryptococcal meningitis. Open Forum Infectious Dis. 2025;0.\\n\\n\\\\[40\\\\] Kyvernitakis A, Torres HA, Jiang Y, et al. Initial use of combination treatment does not impact survival of 106 patients with haematologic malignancies and mucormycosis: a propensity score analysis. Clin Microbiol Infect. 2016;22(9):811-811.e8.\\n\\n\\\\[41\\\\] Soliman SSM, Baldin C, Gu Y, et al. Mucoricin is a ricin-like toxin that is critical for the pathogenesis of mucormycosis. Nat Microbiol. 2021;6(3):313--326.\\n\\n\\\\[42\\\\] Wurster S, Albert ND, Bharadwaj U, et al. Blockade of the PD-1/PD-L1 Immune Checkpoint Pathway Improves Infection Outcomes and Enhances Fungicidal Host Defense in a Murine Model of Invasive Pulmonary Mucormycosis. Front Immunol. 2022;13:838344.\\n\\n\\\\[43\\\\] Kumaresan PR, Manuri PR, Albert ND, et al. Bioengineering T cells to target carbohydrate to treat opportunistic fungal infection. Proc Natl Acad Sci USA. 2014;111(29):10660--10665.\\n\\n\\\\[44\\\\] Boulware DR, Atukunda M, Kagimu E, et al. Oral Lipid Nanocrystal Amphotericin B for Cryptococcal Meningitis: A Randomized Clinical Trial. Clin Infect Dis. 2023;77(12):1659--1667.\\n\\n\\\\[45\\\\] Kontoyiannis DP, Andersson BS, Lewis RE, et al. Progressive disseminated aspergillosis in a bone marrow transplant recipient: response with a high-dose lipid formulation of amphotericin B. Clin Infect Dis. 2001;32(5):E94-6.\",\"language\":\"text\"},\"elapsedMs\":522}</script></tool-result></div>\n\n\n\nExcellent — I have the full paper content. Now let me also load the citations reference to make sure I format the `.bib` file and CSL correctly for JID.\n\n<div><tool-call id=\"toolu_01RScecdx82VBnp1f68Pdcqe\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"# Check if there's a JID CSL style available via the Zotero CSL repository\\ncurl -s \\\"https:...[truncated, total 231 chars]\",\"intent\":\"Check for JID CSL style availability and pandoc version\"},\"intent\":\"Check for JID CSL style availability and pandoc version\",\"inputPreview\":{\"type\":\"code\",\"value\":\"# Check if there's a JID CSL style available via the Zotero CSL repository\\ncurl -s \\\"https://www.zotero.org/styles/journal-of-infectious-diseases\\\" -I | head -5\\n# Also check what pandoc version is available\\npandoc --version | head -2\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01RScecdx82VBnp1f68Pdcqe\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"HTTP/2 200 \\r\\ndate: Wed, 29 Apr 2026 05:56:47 GMT\\r\\ncontent-type: application/vnd.citationst...[truncated, total 209 chars]\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"HTTP/2 200 \\r\\ndate: Wed, 29 Apr 2026 05:56:47 GMT\\r\\ncontent-type: application/vnd.citationstyles.style+xml\\r\\nserver: Apache/2.4.62 (Amazon Linux)\\r\\naccess-control-allow-origin: *\\r\\npandoc 3.9\\nFeatures: +server +lua\",\"language\":\"text\"},\"elapsedMs\":410}</script></tool-result></div>\n\n\n\nThe JID CSL style is available and pandoc 3.9 is installed. Let me now download the CSL file and build the complete Quarto document and `.bib` file.\n\n<div><tool-call id=\"toolu_01MpzUgofvSCua5fnVG8p648\"><script type=\"application/json\">{\"version\":1,\"name\":\"bash\",\"input\":{\"command\":\"curl -s \\\"https://www.zotero.org/styles/journal-of-infectious-diseases\\\" -o \\\"/Users/russelll...[truncated, total 260 chars]\",\"intent\":\"Download the JID CSL citation style file\"},\"intent\":\"Download the JID CSL citation style file\",\"inputPreview\":{\"type\":\"code\",\"value\":\"curl -s \\\"https://www.zotero.org/styles/journal-of-infectious-diseases\\\" -o \\\"/Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\\\" && echo \\\"Downloaded successfully\\\" && wc -l \\\"/Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\\\"\",\"language\":\"bash\"}}</script></tool-call></div>\n\n<div><tool-result call-id=\"toolu_01MpzUgofvSCua5fnVG8p648\"><script type=\"application/json\">{\"version\":1,\"status\":\"success\",\"result\":{\"type\":\"text\",\"value\":\"Downloaded successfully\\n     258 /Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\"},\"resultPreview\":{\"type\":\"code\",\"value\":\"Downloaded successfully\\n     258 /Users/russelllewis/Desktop/HD_JID/journal-of-infectious-diseases.csl\",\"language\":\"text\"},\"elapsedMs\":359}</script></tool-result></div>\n\n\n\nNow let me create the `.bib` file with all 45 references, then the Quarto document."
+          ]
+        }
+      },
+      "timestamp": 1777442190984
+    },
+    {
+      "id": "0d4d972a-467b-4edc-b99d-a56ed3f38b59",
+      "childrenIds": [
+        "59fa2a31-c80c-47b3-a688-a2e56241d259"
+      ],
+      "activeChildId": "59fa2a31-c80c-47b3-a688-a2e56241d259",
+      "message": {
+        "lmMessage": [
+          {
+            "role": "user",
+            "content": "Where are teh files?",
+            "providerOptions": {
+              "providerMetadata": {
+                "positai": {
+                  "timestamp": 1777442499919
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "user",
+          "content": [
+            "Where are teh files?"
+          ]
+        }
+      },
+      "timestamp": 1777442499919
+    },
+    {
+      "id": "59fa2a31-c80c-47b3-a688-a2e56241d259",
+      "childrenIds": [],
+      "activeChildId": null,
+      "message": {
+        "lmMessage": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "The files are being created right now — I was mid-process when you asked. Let me write the `.bib` file and the `.qmd` file now."
+              }
+            ],
+            "providerOptions": {
+              "providerMetadata": {
+                "anthropic": {
+                  "usage": {
+                    "input_tokens": 3,
+                    "cache_creation_input_tokens": 13953,
+                    "cache_read_input_tokens": 16985,
+                    "cache_creation": {
+                      "ephemeral_5m_input_tokens": 13953,
+                      "ephemeral_1h_input_tokens": 0
+                    },
+                    "output_tokens": 4096,
+                    "service_tier": "standard",
+                    "inference_geo": "global"
+                  },
+                  "cacheCreationInputTokens": 13953,
+                  "stopSequence": null,
+                  "iterations": null,
+                  "container": null,
+                  "contextManagement": null
+                },
+                "positai": {
+                  "timestamp": 1777442499988,
+                  "modelId": "claude-sonnet-4-6",
+                  "modelName": "Claude Sonnet 4.6",
+                  "providerId": "anthropic",
+                  "providerName": "Anthropic",
+                  "webSearch": false,
+                  "usage": {
+                    "inputTokens": 3,
+                    "outputTokens": 4096,
+                    "totalTokens": 35037,
+                    "cacheReadTokens": 16985,
+                    "cacheWriteTokens": 13953,
+                    "cacheWrite5mTokens": 13953,
+                    "cacheWrite1hTokens": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "uiMessage": {
+          "role": "assistant",
+          "content": [
+            "The files are being created right now — I was mid-process when you asked. Let me write the `.bib` file and the `.qmd` file now."
+          ]
+        }
+      },
+      "timestamp": 1777442499920
+    }
+  ],
+  "files": []
+}
